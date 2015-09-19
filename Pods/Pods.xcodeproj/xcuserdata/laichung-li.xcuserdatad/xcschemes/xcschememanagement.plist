@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SchemeUserState</key>
+	<dict>
+		<key>Pods-Coffee Luguo-Bolts.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
+		<key>Pods-Coffee Luguo-Parse.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>3</integer>
+		</dict>
+		<key>Pods-Coffee Luguo-youtube-ios-player-helper-Assets.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>5</integer>
+		</dict>
+		<key>Pods-Coffee Luguo-youtube-ios-player-helper.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>4</integer>
+		</dict>
+		<key>Pods-Coffee Luguo.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>469A1CF78380933D38744FA0</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>6ECB0C411A00FBBB1273A425</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>6EEEEFCCED5A7172C82B44C5</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>FE42B879A413F28EEAA195BC</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>FFCB24B0D6AA5793AF9E61FB</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+	</dict>
+</dict>
+</plist>
