@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8187.4" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="fOx-NJ-vpG">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="fOx-NJ-vpG">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8151.3"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -142,14 +142,14 @@
                                         <rect key="frame" x="0.0" y="28" width="600" height="203"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="viV-RH-pe1" id="nh6-P8-727">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="202.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="202"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="thQ-f0-sTf">
-                                                    <rect key="frame" x="10" y="10" width="580" height="182.5"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="thQ-f0-sTf">
+                                                    <rect key="frame" x="10" y="10" width="580" height="183"/>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aKI-r6-K5P" userLabel="mainLabel">
-                                                    <rect key="frame" x="20" y="134" width="117.5" height="58.5"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aKI-r6-K5P" userLabel="mainLabel">
+                                                    <rect key="frame" x="20" y="134" width="118" height="59"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="49"/>
                                                     <color key="textColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
                                                     <nil key="highlightedColor"/>
@@ -169,17 +169,17 @@
                                         <rect key="frame" x="0.0" y="231" width="600" height="150"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="kFB-VL-eha" id="jsn-fQ-NJh">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="149.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="149"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5ib-mD-Bc8">
-                                                    <rect key="frame" x="10" y="10" width="580" height="20.5"/>
+                                                    <rect key="frame" x="10" y="10" width="580" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalCompressionResistancePriority="749" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tLM-qi-55J">
-                                                    <rect key="frame" x="20" y="50" width="560" height="89.5"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalCompressionResistancePriority="749" misplaced="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tLM-qi-55J">
+                                                    <rect key="frame" x="20" y="50" width="560" height="90"/>
                                                     <string key="text">是咖啡老饕的最愛之一。
 而位於南美厄瓜多海域加拉巴哥群島的海龜咖啡，更被譽為精品咖啡中的稀有珍珠。至於喜歡厚重感的咖啡，丁小雨說可以試試肯亞或祕魯咖啡，肯亞是目前全世界還在用古老日曬法製成咖啡，肯亞卡佳AATOP 的咖啡果肉香氣很重，然後帶點微酸，也深獲老饕芳心</string>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -208,7 +208,7 @@
                                         <rect key="frame" x="0.0" y="381" width="600" height="200"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hA7-q0-q6K" id="epU-N3-m9Z">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="199.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="199"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Nz-32-0pW" customClass="YTPlayerView">
@@ -270,7 +270,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uEj-wS-vZ7">
-                                <rect key="frame" x="20" y="400" width="60" height="20.5"/>
+                                <rect key="frame" x="20" y="400" width="60" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="60" id="egc-6b-GXs"/>
                                 </constraints>
@@ -278,8 +278,8 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" verticalHuggingPriority="249" verticalCompressionResistancePriority="748" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="afa-9g-3nN">
-                                <rect key="frame" x="0.0" y="214" width="600" height="136.5"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" verticalHuggingPriority="249" verticalCompressionResistancePriority="748" misplaced="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="afa-9g-3nN">
+                                <rect key="frame" x="0.0" y="214" width="600" height="137"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="150" id="lFe-n6-X1M"/>
                                 </constraints>
@@ -333,7 +333,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iy3-ZN-p3a">
-                                <rect key="frame" x="520" y="400" width="60" height="20.5"/>
+                                <rect key="frame" x="520" y="400" width="60" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="60" id="VbW-Mi-zKE"/>
                                 </constraints>
