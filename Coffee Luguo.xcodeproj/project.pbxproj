@@ -34,6 +34,7 @@
 		AC5DC21C1BAD6C1100D01AF6 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = AC5DC2181BAD6C1100D01AF6 /* LICENSE */; settings = {ASSET_TAGS = (); }; };
 		AC5DC21D1BAD6C1100D01AF6 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = AC5DC2191BAD6C1100D01AF6 /* README.md */; settings = {ASSET_TAGS = (); }; };
 		AC5DC21F1BAD8E1C00D01AF6 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5DC21E1BAD8E1C00D01AF6 /* ResultViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		AC5DC2211BADAFE900D01AF6 /* 123ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5DC2201BADAFE900D01AF6 /* 123ViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		C6120313A75FDDD73FAA3291 /* Pods_Coffee_Luguo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9EC9EC4A4AD8399FB6E15A09 /* Pods_Coffee_Luguo.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
@@ -92,6 +93,7 @@
 		AC5DC2181BAD6C1100D01AF6 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		AC5DC2191BAD6C1100D01AF6 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		AC5DC21E1BAD8E1C00D01AF6 /* ResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
+		AC5DC2201BADAFE900D01AF6 /* 123ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = 123ViewController.swift; sourceTree = "<group>"; };
 		E1DB7F10AEC66C170A6C8A20 /* Pods-Coffee Luguo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Coffee Luguo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Coffee Luguo/Pods-Coffee Luguo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -192,6 +194,7 @@
 				5F8409E61BADB3DF004D837B /* 111ViewController.swift */,
 				AC5DC1D41BAD517700D01AF6 /* IntroViewController.swift */,
 				AC5DC1D81BAD585A00D01AF6 /* Header-Bridge.h */,
+				AC5DC2201BADAFE900D01AF6 /* 123ViewController.swift */,
 				AC5DC21E1BAD8E1C00D01AF6 /* ResultViewController.swift */,
 				AC5DC1D61BAD518A00D01AF6 /* TestViewController.swift */,
 				AC1A9FD91BAD2E0A00221043 /* Assets.xcassets */,
@@ -442,6 +445,7 @@
 				AC5DC21D1BAD6C1100D01AF6 /* README.md in Sources */,
 				AC1A9FD81BAD2E0A00221043 /* Coffee_Luguo.xcdatamodeld in Sources */,
 				AC1A9FD01BAD2E0A00221043 /* AppDelegate.swift in Sources */,
+				AC5DC2211BADAFE900D01AF6 /* 123ViewController.swift in Sources */,
 				AC5DC1D51BAD517700D01AF6 /* IntroViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
