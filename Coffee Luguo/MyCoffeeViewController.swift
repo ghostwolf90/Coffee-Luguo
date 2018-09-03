@@ -29,19 +29,18 @@ class MyCoffeeViewController: UIViewController,UITableViewDataSource, UITableVie
         // Dispose of any resources that can be recreated.
     }
     
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return coffeeId.count
     }
     
-    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: IndexPath) -> CGFloat {
      
         return 110
     }
     
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("myCoffeeCell", forIndexPath: indexPath) as! MyCoffeeTableViewCell
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "myCoffeeCell", for: indexPath as IndexPath) as! MyCoffeeTableViewCell
         
-    
         cell.coffeeIdLabel.text = coffeeId[indexPath.row]
         cell.introductionLabel.text = coffeeIn[indexPath.row]
         cell.coffeeImageView.image = UIImage(named: coffeeImage[indexPath.row])
@@ -51,7 +50,6 @@ class MyCoffeeViewController: UIViewController,UITableViewDataSource, UITableVie
     
         return cell
     }
-    
 
     /*
     // MARK: - Navigation

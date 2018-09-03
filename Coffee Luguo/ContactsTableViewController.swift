@@ -17,16 +17,16 @@ class ContactsTableViewController: UITableViewController {
     @IBAction func outButton(sender: AnyObject) {
         
         let alertController = UIAlertController(title: "系统提示",
-            message: "您確定要登出吗？", preferredStyle: UIAlertControllerStyle.Alert)
-        let cancelAction = UIAlertAction(title: "取消", style: UIAlertActionStyle.Cancel, handler: nil)
-        let okAction = UIAlertAction(title: "確定", style: UIAlertActionStyle.Default,
+                                                message: "您確定要登出吗？", preferredStyle: UIAlertControllerStyle.alert)
+        let cancelAction = UIAlertAction(title: "取消", style: UIAlertActionStyle.cancel, handler: nil)
+        let okAction = UIAlertAction(title: "確定", style: UIAlertActionStyle.default,
             handler: {
                 action in
                 print("點擊了确定")
         })
         alertController.addAction(cancelAction)
         alertController.addAction(okAction)
-        self.presentViewController(alertController, animated: true, completion: nil)
+        self.present(alertController, animated: true, completion: nil)
     }
     
     override func viewDidLoad() {
@@ -41,50 +41,50 @@ class ContactsTableViewController: UITableViewController {
 
     // MARK: - Table view data source
 
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1
     }
 
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         return 4
     }
 
     
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         switch indexPath.row {
         case 0 :
             print("row1")
-            let imageCell = tableView.dequeueReusableCellWithIdentifier("imageCell", forIndexPath: indexPath) as! imageTableViewCell
+            let imageCell = tableView.dequeueReusableCell(withIdentifier: "imageCell", for: indexPath as IndexPath) as! imageTableViewCell
             imageCell.imageView?.image = UIImage(named:"coffeeL.jpg")
             return imageCell            
         case 1 :
             print("row 2")
-            let cell = tableView.dequeueReusableCellWithIdentifier("cell1", forIndexPath: indexPath) as! cellTableViewCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: "cell1", for: indexPath as IndexPath) as! cellTableViewCell
             cell.firstLabel.text = titleName[0]
             return cell
             
         case 2 :
             print("row 3")
-            let cell = tableView.dequeueReusableCellWithIdentifier("cell2", forIndexPath: indexPath) as! cellTableViewCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: "cell2", for: indexPath as IndexPath) as! cellTableViewCell
             cell.firstLabel.text = titleName[1]
             return cell
         case 3 :
             print("row 4")
-            let cell = tableView.dequeueReusableCellWithIdentifier("cell3", forIndexPath: indexPath) as! cellTableViewCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: "cell3", for: indexPath as IndexPath) as! cellTableViewCell
             cell.firstLabel.text = titleName[2]
             return cell
         default :
             print("no row")
-            let cell = tableView.dequeueReusableCellWithIdentifier("cell1", forIndexPath: indexPath) as! cellTableViewCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: "cell1", for: indexPath as IndexPath) as! cellTableViewCell
             cell.firstLabel.text = titleName[1]
             return cell
         }
     }
     
-    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         if indexPath.row == 0 {
             return 350
         }
@@ -93,21 +93,21 @@ class ContactsTableViewController: UITableViewController {
     }
 
     func showCoffeeCard(){
-        let coffee_vc = self.storyboard?.instantiateViewControllerWithIdentifier("showCoffeeCard") as! coffeeCardViewController
-        self.showViewController(coffee_vc, sender: self)
+        let coffee_vc = self.storyboard?.instantiateViewController(withIdentifier: "showCoffeeCard") as! coffeeCardViewController
+        self.show(coffee_vc, sender: self)
     }
     
     func showContacts(){
-        let contacts_vc = self.storyboard?.instantiateViewControllerWithIdentifier("showContacts") as! ContactsDetiaViewController
-        self.showViewController(contacts_vc, sender: self)
+        let contacts_vc = self.storyboard?.instantiateViewController(withIdentifier: "showContacts") as! ContactsDetiaViewController
+        self.show(contacts_vc, sender: self)
     }
     
     func showMyCoffee(){
-        let myCoffee_vc = self.storyboard?.instantiateViewControllerWithIdentifier("myCoffee") as! MyCoffeeViewController
-        self.showViewController(myCoffee_vc, sender: self)
+        let myCoffee_vc = self.storyboard?.instantiateViewController(withIdentifier: "myCoffee") as! MyCoffeeViewController
+        self.show(myCoffee_vc, sender: self)
     }
     
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         switch indexPath.row {
         case 0 :
             print("0")
@@ -124,49 +124,5 @@ class ContactsTableViewController: UITableViewController {
             print("")
         }
     }
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
-    }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-        if editingStyle == .Delete {
-            // Delete the row from the data source
-            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
-        } else if editingStyle == .Insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(tableView: UITableView, moveRowAtIndexPath fromIndexPath: NSIndexPath, toIndexPath: NSIndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(tableView: UITableView, canMoveRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

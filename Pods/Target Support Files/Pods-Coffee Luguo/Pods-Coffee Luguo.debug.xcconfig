@@ -1,8 +1,9 @@
-FRAMEWORK_SEARCH_PATHS = $(inherited) "$PODS_FRAMEWORK_BUILD_PATH"
+FRAMEWORK_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/Bolts" "${PODS_CONFIGURATION_BUILD_DIR}/Parse" "${PODS_CONFIGURATION_BUILD_DIR}/youtube-ios-player-helper"
 GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
 LD_RUNPATH_SEARCH_PATHS = $(inherited) '@executable_path/Frameworks' '@loader_path/Frameworks'
-OTHER_CFLAGS = $(inherited) -iquote "$PODS_FRAMEWORK_BUILD_PATH/Bolts.framework/Headers" -iquote "$PODS_FRAMEWORK_BUILD_PATH/Parse.framework/Headers" -iquote "$PODS_FRAMEWORK_BUILD_PATH/youtube_ios_player_helper.framework/Headers"
-OTHER_LDFLAGS = $(inherited) -ObjC -framework "Bolts" -framework "Parse" -framework "youtube_ios_player_helper"
-OTHER_LIBTOOLFLAGS = $(OTHER_LDFLAGS)
-PODS_FRAMEWORK_BUILD_PATH = $(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/Pods-Coffee Luguo
+OTHER_CFLAGS = $(inherited) -iquote "${PODS_CONFIGURATION_BUILD_DIR}/Bolts/Bolts.framework/Headers" -iquote "${PODS_CONFIGURATION_BUILD_DIR}/Parse/Parse.framework/Headers" -iquote "${PODS_CONFIGURATION_BUILD_DIR}/youtube-ios-player-helper/youtube_ios_player_helper.framework/Headers"
+OTHER_LDFLAGS = $(inherited) -framework "Bolts" -framework "Parse" -framework "youtube_ios_player_helper"
+PODS_BUILD_DIR = ${BUILD_DIR}
+PODS_CONFIGURATION_BUILD_DIR = ${PODS_BUILD_DIR}/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)
+PODS_PODFILE_DIR_PATH = ${SRCROOT}/.
 PODS_ROOT = ${SRCROOT}/Pods

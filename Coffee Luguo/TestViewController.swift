@@ -69,7 +69,7 @@ class TestViewController: UIViewController {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
-        self.swichText(0)
+        self.swichText(index: 0)
     }
 
     override func didReceiveMemoryWarning() {
@@ -77,18 +77,14 @@ class TestViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    override func viewDidAppear(animated: Bool) {
+    override func viewDidAppear(_ animated: Bool) {
         self.openYoutube()
     }
     
     func openYoutube() {
-        self.utubeView.loadWithVideoId(self.uTubeAdress[self.questionIndex])
+        self.utubeView.load(withVideoId: self.uTubeAdress[self.questionIndex])
     }
 
-    
-    
-    
-    
     
 //calculate
     func calculateScore() -> [Float] {
@@ -99,10 +95,10 @@ class TestViewController: UIViewController {
             var singleScore: Float = 0
             for num in rank {
                 singleScore += num * (self.dataAnswer[i])
-                i++
+                i+=1
             }
             score[index] = singleScore
-            index++
+            index+=1
         }
         print("final score are: \(score)", terminator: "")
         return score
@@ -117,7 +113,7 @@ class TestViewController: UIViewController {
         let frameWidth = self.view.frame.width
         let frameHeight = self.view.frame.height / 2
         
-        UIView.animateWithDuration(0.5, delay: 0.0, options: [UIViewAnimationOptions.CurveEaseOut], animations: { () -> Void in
+        UIView.animate(withDuration: 0.5, delay: 0.0, options: [UIViewAnimationOptions.curveEaseOut], animations: { () -> Void in
             
             self.headLabelLeadConst.constant += frameWidth
             self.leftButtonButtomConst.constant -= frameHeight
@@ -126,13 +122,13 @@ class TestViewController: UIViewController {
             self.view.layoutIfNeeded()
             }) { (bool) -> Void in
                 if forward {
-                    self.swichText(index + 1)
+                    self.swichText(index: index + 1)
                 }else {
-                    self.swichText(index - 1)
+                    self.swichText(index: index - 1)
                 }
                 
         }
-        UIView.animateWithDuration(0.5, delay: 0.5, options: UIViewAnimationOptions.CurveEaseIn, animations: { () -> Void in
+        UIView.animate(withDuration: 0.5, delay: 0.5, options: UIViewAnimationOptions.curveEaseIn, animations: { () -> Void in
             
             self.headLabelLeadConst.constant -= frameWidth
             self.leftButtonButtomConst.constant += frameHeight
@@ -152,12 +148,12 @@ class TestViewController: UIViewController {
         self.subTextView.text = self.subTextText[index]
         self.leftLabel.text = self.leftLabelText[index]
         self.rightLabel.text = self.rightLabelText[index]
-        self.rightButton.setTitle(self.rightButtonText[index], forState: UIControlState.Normal)
-        self.leftButton.setTitle(self.leftButtonText[index], forState: UIControlState.Normal)
+        self.rightButton.setTitle(self.rightButtonText[index], for: .normal)
+        self.leftButton.setTitle(self.leftButtonText[index], for: .normal)
         if index == 0 {
-            self.leftButton.hidden = true
+            self.leftButton.isHidden = true
         }else {
-            self.leftButton.hidden = false
+            self.leftButton.isHidden = false
         }
     }
     
@@ -173,39 +169,39 @@ class TestViewController: UIViewController {
         case 0 :
             //香氣
             self.dataAnswer[0] = self.sliderBar.value
-            self.animateButton(0, forward: true)
-            self.questionIndex++
+            self.animateButton(index: 0, forward: true)
+            self.questionIndex += 1
             self.sliderBar.setValue(self.dataAnswer[self.questionIndex], animated: true)
             
         case 1 :
             //回甘
             self.dataAnswer[1] = self.sliderBar.value
-            self.animateButton(1, forward: true)
-            self.questionIndex++
+            self.animateButton(index: 1, forward: true)
+            self.questionIndex += 1
             self.sliderBar.setValue(self.dataAnswer[self.questionIndex], animated: true)
             
         case 2 :
             //酸感
             self.dataAnswer[2] = self.sliderBar.value
-            self.animateButton(2, forward: true)
-            self.questionIndex++
+            self.animateButton(index: 2, forward: true)
+            self.questionIndex += 1
             self.sliderBar.setValue(self.dataAnswer[self.questionIndex], animated: true)
         case 3 :
             //香醇
             self.dataAnswer[3] = self.sliderBar.value
-            self.animateButton(3, forward: true)
-            self.questionIndex++
+            self.animateButton(index: 3, forward: true)
+            self.questionIndex += 1
             self.sliderBar.setValue(self.dataAnswer[self.questionIndex], animated: true)
             
         case 4 :
             //苦味 => 進入答案
             self.dataAnswer[4] = self.sliderBar.value
             self.result = self.calculateScore()
-            self.resultIndex = self.result.indexOf(self.result.maxElement()!)!
+            //self.resultIndex = self.result.indexOf(self.result.maxElement()!)!
             
             print("max element: \(self.resultIndex)")
             print(self.dataAnswer)
-            self.performSegueWithIdentifier("ResultSegue", sender: self)
+            self.performSegue(withIdentifier: "ResultSegue", sender: self)
             return
             
         default :
@@ -227,27 +223,27 @@ class TestViewController: UIViewController {
         case 1 :
             //回甘
             self.dataAnswer[1] = self.sliderBar.value
-            self.animateButton(1, forward: false)
-            self.questionIndex--
+            self.animateButton(index: 1, forward: false)
+            self.questionIndex -= 1
             self.sliderBar.setValue(self.dataAnswer[self.questionIndex], animated: true)
         case 2 :
             //酸感
             self.dataAnswer[2] = self.sliderBar.value
-            self.animateButton(2, forward: false)
-            self.questionIndex--
+            self.animateButton(index: 2, forward: false)
+            self.questionIndex -= 1
             self.sliderBar.setValue(self.dataAnswer[self.questionIndex], animated: true)
         case 3 :
             //香醇
             self.dataAnswer[3] = self.sliderBar.value
-            self.animateButton(3, forward: false)
-            self.questionIndex--
+            self.animateButton(index: 3, forward: false)
+            self.questionIndex -= 1
             self.sliderBar.setValue(self.dataAnswer[self.questionIndex], animated: true)
             
         case 4 :
             //苦味 => 回去
             self.dataAnswer[4] = self.sliderBar.value
-            self.animateButton(4, forward: false)
-            self.questionIndex--
+            self.animateButton(index: 4, forward: false)
+            self.questionIndex -= 1
             self.sliderBar.setValue(self.dataAnswer[self.questionIndex], animated: true)
             
         default :
@@ -271,9 +267,9 @@ class TestViewController: UIViewController {
     */
     
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "ResultSegue" {
-            if let VC = segue.destinationViewController as? ResultViewController {
+            if let VC = segue.destination as? ResultViewController {
                 print("perform segue to result")
                 VC.result = self.resultIndex
                 

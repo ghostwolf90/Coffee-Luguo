@@ -1,0 +1,6 @@
+framework module Pods_Coffee_LuguoTests {
+  umbrella header "Pods-Coffee LuguoTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
