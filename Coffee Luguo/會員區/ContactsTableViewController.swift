@@ -10,7 +10,7 @@ import UIKit
 
 class ContactsTableViewController: UIViewController {
     
-    var titleName = ["會員基本資料", "我的咖啡卡", "我的咖啡"]
+    var titleName = ["我的資料", "我的咖啡卡", "我的咖啡紀錄"]
     
     override func viewDidLoad() {
         super.viewDidLoad()

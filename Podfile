@@ -1,10 +1,11 @@
 # Uncomment this line to define a global platform for your project
-# platform :ios, '6.0'
+# platform :ios, '11.0'
 use_frameworks!
 target 'Coffee Luguo' do
 
-pod 'Parse'
-
+pod 'FacebookCore'
+pod 'FacebookLogin'
+pod 'FacebookShare'
 pod 'youtube-ios-player-helper', '~> 0.1.4'
 end
 

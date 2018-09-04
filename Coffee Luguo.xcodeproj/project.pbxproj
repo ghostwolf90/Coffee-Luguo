@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3FC54710213E89ED0075C76C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC5470F213E89ED0075C76C /* LoginViewController.swift */; };
 		3FD3378B213DF14E002D18FF /* imageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD33783213DF14D002D18FF /* imageTableViewCell.swift */; };
 		3FD3378C213DF14E002D18FF /* ContactsDetiaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD33784213DF14D002D18FF /* ContactsDetiaViewController.swift */; };
 		3FD3378D213DF14E002D18FF /* MyCoffeeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD33785213DF14D002D18FF /* MyCoffeeTableViewCell.swift */; };
@@ -71,6 +72,7 @@
 		3F4C1A98213DF64B00233F4E /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		3F4C1A99213DF65900233F4E /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		3F4C1A9A213DF65900233F4E /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		3FC5470F213E89ED0075C76C /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		3FD33783213DF14D002D18FF /* imageTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = imageTableViewCell.swift; sourceTree = "<group>"; };
 		3FD33784213DF14D002D18FF /* ContactsDetiaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactsDetiaViewController.swift; sourceTree = "<group>"; };
 		3FD33785213DF14D002D18FF /* MyCoffeeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyCoffeeTableViewCell.swift; sourceTree = "<group>"; };
@@ -179,6 +181,7 @@
 		3F42D682213E24B400BE59D1 /* QRcode */ = {
 			isa = PBXGroup;
 			children = (
+				5FD728271BAE7B6D0065B71A /* ShowQroceViewController.swift */,
 				5FD728251BAE782F0065B71A /* QRcodeViewController.swift */,
 			);
 			path = QRcode;
@@ -261,12 +264,12 @@
 				3F077761213E1E2E003F8D59 /* 提問區 */,
 				AC1A9FD31BAD2E0A00221043 /* Main.storyboard */,
 				AC1A9FCF1BAD2E0A00221043 /* AppDelegate.swift */,
+				3FC5470F213E89ED0075C76C /* LoginViewController.swift */,
 				AC1A9FD11BAD2E0A00221043 /* ViewController.swift */,
 				AC5DC1D41BAD517700D01AF6 /* IntroViewController.swift */,
-				5FD728271BAE7B6D0065B71A /* ShowQroceViewController.swift */,
+				AC5DC21E1BAD8E1C00D01AF6 /* ResultViewController.swift */,
 				AC5DC1D81BAD585A00D01AF6 /* Header-Bridge.h */,
 				5F75E96D1BADF20300A07C75 /* Paws-Bridging-Header.h */,
-				AC5DC21E1BAD8E1C00D01AF6 /* ResultViewController.swift */,
 				AC1A9FD91BAD2E0A00221043 /* Assets.xcassets */,
 				AC1A9FDB1BAD2E0A00221043 /* LaunchScreen.storyboard */,
 				AC1A9FDE1BAD2E0A00221043 /* Info.plist */,
@@ -519,13 +522,23 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Coffee Luguo/Pods-Coffee Luguo-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
-				"${BUILT_PRODUCTS_DIR}/Parse/Parse.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKShareKit/FBSDKShareKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FacebookCore/FacebookCore.framework",
+				"${BUILT_PRODUCTS_DIR}/FacebookLogin/FacebookLogin.framework",
+				"${BUILT_PRODUCTS_DIR}/FacebookShare/FacebookShare.framework",
 				"${BUILT_PRODUCTS_DIR}/youtube-ios-player-helper/youtube_ios_player_helper.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Parse.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKShareKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookCore.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookLogin.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookShare.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/youtube_ios_player_helper.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -544,6 +557,7 @@
 				AC1A9FD21BAD2E0A00221043 /* ViewController.swift in Sources */,
 				AC5DC21B1BAD6C1100D01AF6 /* YTPlayerView.m in Sources */,
 				3FD3378C213DF14E002D18FF /* ContactsDetiaViewController.swift in Sources */,
+				3FC54710213E89ED0075C76C /* LoginViewController.swift in Sources */,
 				3FD3378E213DF14E002D18FF /* ContactsTableViewController.swift in Sources */,
 				3FD3378D213DF14E002D18FF /* MyCoffeeTableViewCell.swift in Sources */,
 				5FD728261BAE782F0065B71A /* QRcodeViewController.swift in Sources */,
@@ -709,7 +723,7 @@
 				);
 				INFOPLIST_FILE = "Coffee Luguo/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "Morpheus.Coffee-Luguo";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.LaiBit.Coffee-Luguo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Coffee Luguo/Header-Bridge.h";
 			};
@@ -727,7 +741,7 @@
 				);
 				INFOPLIST_FILE = "Coffee Luguo/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "Morpheus.Coffee-Luguo";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.LaiBit.Coffee-Luguo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Coffee Luguo/Header-Bridge.h";
 			};

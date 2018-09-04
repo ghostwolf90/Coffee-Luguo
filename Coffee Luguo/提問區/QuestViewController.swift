@@ -11,7 +11,6 @@ import UIKit
 
 class QuestViewController: UIViewController {
 
-
     @IBOutlet weak var headLabelLeadConst: NSLayoutConstraint!
     
     @IBOutlet weak var subTextLeadConst: NSLayoutConstraint!
@@ -37,8 +36,8 @@ class QuestViewController: UIViewController {
     @IBOutlet weak var rightButton: UIButton!
     
     
-    //utube
-    var uTubeAdress: [String] = ["35gCiF22P0k", "35gCiF22P0k", "35gCiF22P0k", "35gCiF22P0k", "35gCiF22P0k"]
+    //youtube
+    var youtubeIDs: [String] = ["ma7r2HGqwXs", "Lhel0tzHE08", "35gCiF22P0k", "35gCiF22P0k", "35gCiF22P0k"]
     
     //view
     var headLabelText = ["香氣", "回甘", "酸度", "醇度", "苦感"]
@@ -47,8 +46,6 @@ class QuestViewController: UIViewController {
     var leftButtonText = ["", "上一題", "上一題", "上一題", "上一題"]
     var rightLabelText = ["香氣濃", "甜", "酸", "醇濃", "苦"]
     var leftLabelText = ["香氣淡", "不甜", "不酸", "清淡", "不苦"]
-    
-    
     
     //question
     var questionIndex = 0
@@ -78,11 +75,11 @@ class QuestViewController: UIViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        self.openYoutube()
+        self.openYoutube(questionIndex: 0)
     }
     
-    func openYoutube() {
-        self.utubeView.load(withVideoId: self.uTubeAdress[self.questionIndex])
+    func openYoutube(questionIndex:Int) {
+        self.utubeView.load(withVideoId: youtubeIDs[questionIndex])
     }
 
     
@@ -103,10 +100,7 @@ class QuestViewController: UIViewController {
         print("final score are: \(score)", terminator: "")
         return score
     }
-    
-    
-    
-    
+
 //animation
     
     func animateButton(index: Int, forward: Bool) {
@@ -139,9 +133,7 @@ class QuestViewController: UIViewController {
             }) { (bool) -> Void in
                 
         }
-        
     }
-    
     
     func swichText(index: Int) {
         self.headLabel.text = self.headLabelText[index]
@@ -157,13 +149,23 @@ class QuestViewController: UIViewController {
         }
     }
     
+    func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "ResultSegue" {
+            if let VC = segue.destination as? ResultViewController {
+                print("perform segue to result")
+                VC.result = self.resultIndex
+                
+            }
+        }
+    }
+}
+
+
+//MARK: Button事件
+extension QuestViewController{
     
-    
-    
-//button action
     @IBAction func rightButtonTouch(_ sender: UIButton) {
         print("press right button on page: \(self.headLabelText[self.questionIndex])")
-        
         switch self.questionIndex {
         case 0 :
             //香氣
@@ -205,20 +207,18 @@ class QuestViewController: UIViewController {
             
         default :
             print("final")
-            
         }
+        openYoutube(questionIndex: questionIndex)
     }
-    
     
     @IBAction func leftButtonTouch(_ sender: AnyObject) {
         print("press left button on page: \(self.headLabelText[self.questionIndex])")
-        
+        openYoutube(questionIndex: questionIndex)
         switch self.questionIndex {
         case 0 :
             return
             //香氣 => end
             //end
-            
         case 1 :
             //回甘
             self.dataAnswer[1] = self.sliderBar.value
@@ -244,7 +244,6 @@ class QuestViewController: UIViewController {
             self.animateButton(index: 4, forward: false)
             self.questionIndex -= 1
             self.sliderBar.setValue(self.dataAnswer[self.questionIndex], animated: true)
-            
         default :
             print("final")
             
@@ -252,28 +251,4 @@ class QuestViewController: UIViewController {
         
     }
     
-    
-    
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-    
-    
-    func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue.identifier == "ResultSegue" {
-            if let VC = segue.destination as? ResultViewController {
-                print("perform segue to result")
-                VC.result = self.resultIndex
-                
-            }
-        }
-    }
-
 }
