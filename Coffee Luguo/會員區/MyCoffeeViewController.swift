@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MyCoffeeViewController: UIViewController,UITableViewDataSource, UITableViewDelegate {
+class MyCoffeeViewController: UIViewController {
     
     var coffeeId = [ "極品藍山", "山多士", "哥倫比亞", "摩卡"]
     var coffeeIn = ["在海拔2256公尺\n的藍山而聞名，栽種在80-1500 公尺之斜坡，\n級數分為No1.、No2.、No3",
@@ -19,22 +19,25 @@ class MyCoffeeViewController: UIViewController,UITableViewDataSource, UITableVie
     var coffeeImage = ["coffeeG.jpg","coffeeR.jpg","coffeeB.jpg","coffeeY.jpg"]
     var prototypeCell: MyCoffeeTableViewCell!
     
+    @IBOutlet weak var myCoffeeTableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+}
+
+extension MyCoffeeViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return coffeeId.count
     }
     
-    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: IndexPath) -> CGFloat {
-     
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 110
     }
     
@@ -47,18 +50,7 @@ class MyCoffeeViewController: UIViewController,UITableViewDataSource, UITableVie
         
         cell.coffeeImageView.layer.cornerRadius = cell.coffeeImageView.frame.size.width/2
         cell.coffeeImageView.clipsToBounds = true
-    
+        
         return cell
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

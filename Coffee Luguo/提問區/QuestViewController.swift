@@ -1,5 +1,5 @@
 //
-//  TestViewController.swift
+//  QuestViewController.swift
 //  Coffee Luguo
 //
 //  Created by 陳冠宇 on 2015/9/19.
@@ -9,7 +9,7 @@
 import UIKit
 
 
-class TestViewController: UIViewController {
+class QuestViewController: UIViewController {
 
 
     @IBOutlet weak var headLabelLeadConst: NSLayoutConstraint!
@@ -115,10 +115,10 @@ class TestViewController: UIViewController {
         
         UIView.animate(withDuration: 0.5, delay: 0.0, options: [UIViewAnimationOptions.curveEaseOut], animations: { () -> Void in
             
-            self.headLabelLeadConst.constant += frameWidth
-            self.leftButtonButtomConst.constant -= frameHeight
-            self.rightButtonButtomConst.constant -= frameHeight
-            self.subTextLeadConst.constant -= frameWidth
+//            self.headLabelLeadConst.constant += frameWidth
+//            self.leftButtonButtomConst.constant = frameHeight
+//            self.rightButtonButtomConst.constant = frameHeight
+//            self.subTextLeadConst.constant -= frameWidth
             self.view.layoutIfNeeded()
             }) { (bool) -> Void in
                 if forward {
@@ -130,10 +130,10 @@ class TestViewController: UIViewController {
         }
         UIView.animate(withDuration: 0.5, delay: 0.5, options: UIViewAnimationOptions.curveEaseIn, animations: { () -> Void in
             
-            self.headLabelLeadConst.constant -= frameWidth
-            self.leftButtonButtomConst.constant += frameHeight
-            self.rightButtonButtomConst.constant += frameHeight
-            self.subTextLeadConst.constant += frameWidth
+//            self.headLabelLeadConst.constant -= frameWidth
+//            self.leftButtonButtomConst.constant += frameHeight
+//            self.rightButtonButtomConst.constant += frameHeight
+//            self.subTextLeadConst.constant += frameWidth
             
             self.view.layoutIfNeeded()
             }) { (bool) -> Void in
@@ -161,8 +161,7 @@ class TestViewController: UIViewController {
     
     
 //button action
-    
-    @IBAction func rightButtonTouch(sender: AnyObject) {
+    @IBAction func rightButtonTouch(_ sender: UIButton) {
         print("press right button on page: \(self.headLabelText[self.questionIndex])")
         
         switch self.questionIndex {
@@ -208,10 +207,10 @@ class TestViewController: UIViewController {
             print("final")
             
         }
-        
     }
     
-    @IBAction func leftButtonTouch(sender: AnyObject) {
+    
+    @IBAction func leftButtonTouch(_ sender: AnyObject) {
         print("press left button on page: \(self.headLabelText[self.questionIndex])")
         
         switch self.questionIndex {

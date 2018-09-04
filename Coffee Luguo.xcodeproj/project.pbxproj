@@ -13,10 +13,10 @@
 		3FD3378E213DF14E002D18FF /* ContactsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD33786213DF14D002D18FF /* ContactsTableViewController.swift */; };
 		3FD3378F213DF14E002D18FF /* cellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD33787213DF14E002D18FF /* cellTableViewCell.swift */; };
 		3FD33790213DF14E002D18FF /* MyCoffeeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD33788213DF14E002D18FF /* MyCoffeeViewController.swift */; };
-		3FD33791213DF14E002D18FF /* coffeeCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD33789213DF14E002D18FF /* coffeeCardViewController.swift */; };
+		3FD33791213DF14E002D18FF /* CoffeeCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD33789213DF14E002D18FF /* CoffeeCardViewController.swift */; };
 		3FD33792213DF14E002D18FF /* ContactsDetialTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD3378A213DF14E002D18FF /* ContactsDetialTableViewCell.swift */; };
 		5FD728261BAE782F0065B71A /* QRcodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FD728251BAE782F0065B71A /* QRcodeViewController.swift */; };
-		5FD728281BAE7B6D0065B71A /* showQroceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FD728271BAE7B6D0065B71A /* showQroceViewController.swift */; };
+		5FD728281BAE7B6D0065B71A /* ShowQroceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FD728271BAE7B6D0065B71A /* ShowQroceViewController.swift */; };
 		64C4E1617A6F93975E4C2B9C /* Pods_Coffee_LuguoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACA6E1BCCE04559B352D09ED /* Pods_Coffee_LuguoUITests.framework */; };
 		A8FF2BFCA503C36E65E43424 /* Pods_Coffee_Luguo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15DCC55131F2579407ABBDFB /* Pods_Coffee_Luguo.framework */; };
 		AC1A9FD01BAD2E0A00221043 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1A9FCF1BAD2E0A00221043 /* AppDelegate.swift */; };
@@ -31,7 +31,7 @@
 		AC1AA0171BAD35FC00221043 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = AC1AA0161BAD35FC00221043 /* libz.tbd */; };
 		AC1AA0191BAD362700221043 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = AC1AA0181BAD362700221043 /* libsqlite3.tbd */; };
 		AC5DC1D51BAD517700D01AF6 /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5DC1D41BAD517700D01AF6 /* IntroViewController.swift */; };
-		AC5DC1D71BAD518A00D01AF6 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5DC1D61BAD518A00D01AF6 /* TestViewController.swift */; };
+		AC5DC1D71BAD518A00D01AF6 /* QuestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5DC1D61BAD518A00D01AF6 /* QuestViewController.swift */; };
 		AC5DC21A1BAD6C1100D01AF6 /* YTPlayerView-iframe-player.html in Resources */ = {isa = PBXBuildFile; fileRef = AC5DC2141BAD6C1100D01AF6 /* YTPlayerView-iframe-player.html */; };
 		AC5DC21B1BAD6C1100D01AF6 /* YTPlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = AC5DC2171BAD6C1100D01AF6 /* YTPlayerView.m */; };
 		AC5DC21C1BAD6C1100D01AF6 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = AC5DC2181BAD6C1100D01AF6 /* LICENSE */; };
@@ -77,12 +77,12 @@
 		3FD33786213DF14D002D18FF /* ContactsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactsTableViewController.swift; sourceTree = "<group>"; };
 		3FD33787213DF14E002D18FF /* cellTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = cellTableViewCell.swift; sourceTree = "<group>"; };
 		3FD33788213DF14E002D18FF /* MyCoffeeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyCoffeeViewController.swift; sourceTree = "<group>"; };
-		3FD33789213DF14E002D18FF /* coffeeCardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = coffeeCardViewController.swift; sourceTree = "<group>"; };
+		3FD33789213DF14E002D18FF /* CoffeeCardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoffeeCardViewController.swift; sourceTree = "<group>"; };
 		3FD3378A213DF14E002D18FF /* ContactsDetialTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactsDetialTableViewCell.swift; sourceTree = "<group>"; };
 		59ED8DE3BAE0E0ED926DDA6F /* Pods-Coffee Luguo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Coffee Luguo.release.xcconfig"; path = "Pods/Target Support Files/Pods-Coffee Luguo/Pods-Coffee Luguo.release.xcconfig"; sourceTree = "<group>"; };
 		5F75E96D1BADF20300A07C75 /* Paws-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Paws-Bridging-Header.h"; sourceTree = "<group>"; };
 		5FD728251BAE782F0065B71A /* QRcodeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRcodeViewController.swift; sourceTree = "<group>"; };
-		5FD728271BAE7B6D0065B71A /* showQroceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = showQroceViewController.swift; sourceTree = "<group>"; };
+		5FD728271BAE7B6D0065B71A /* ShowQroceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowQroceViewController.swift; sourceTree = "<group>"; };
 		6AE1CCED159E600B22AAE6B0 /* Pods_Coffee_LuguoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Coffee_LuguoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		77248E62258093E6A22AA33E /* Pods-Coffee Luguo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Coffee Luguo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Coffee Luguo/Pods-Coffee Luguo.debug.xcconfig"; sourceTree = "<group>"; };
 		82538998FEB18DF429C60A79 /* Pods-Coffee LuguoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Coffee LuguoUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Coffee LuguoUITests/Pods-Coffee LuguoUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -104,7 +104,7 @@
 		AC1AA0161BAD35FC00221043 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		AC1AA0181BAD362700221043 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		AC5DC1D41BAD517700D01AF6 /* IntroViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntroViewController.swift; sourceTree = "<group>"; };
-		AC5DC1D61BAD518A00D01AF6 /* TestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
+		AC5DC1D61BAD518A00D01AF6 /* QuestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestViewController.swift; sourceTree = "<group>"; };
 		AC5DC1D81BAD585A00D01AF6 /* Header-Bridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Header-Bridge.h"; sourceTree = "<group>"; };
 		AC5DC2141BAD6C1100D01AF6 /* YTPlayerView-iframe-player.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "YTPlayerView-iframe-player.html"; sourceTree = "<group>"; };
 		AC5DC2161BAD6C1100D01AF6 /* YTPlayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YTPlayerView.h; sourceTree = "<group>"; };
@@ -147,6 +147,52 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3F077761213E1E2E003F8D59 /* 提問區 */ = {
+			isa = PBXGroup;
+			children = (
+				AC5DC1D61BAD518A00D01AF6 /* QuestViewController.swift */,
+			);
+			path = "提問區";
+			sourceTree = "<group>";
+		};
+		3F077762213E1E39003F8D59 /* 會員區 */ = {
+			isa = PBXGroup;
+			children = (
+				3F077763213E21EB003F8D59 /* Cell */,
+				3FD33786213DF14D002D18FF /* ContactsTableViewController.swift */,
+				3FD33784213DF14D002D18FF /* ContactsDetiaViewController.swift */,
+				3FD33789213DF14E002D18FF /* CoffeeCardViewController.swift */,
+				3FD33788213DF14E002D18FF /* MyCoffeeViewController.swift */,
+			);
+			path = "會員區";
+			sourceTree = "<group>";
+		};
+		3F077763213E21EB003F8D59 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				3FD33785213DF14D002D18FF /* MyCoffeeTableViewCell.swift */,
+				3FD3378A213DF14E002D18FF /* ContactsDetialTableViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		3F42D682213E24B400BE59D1 /* QRcode */ = {
+			isa = PBXGroup;
+			children = (
+				5FD728251BAE782F0065B71A /* QRcodeViewController.swift */,
+			);
+			path = QRcode;
+			sourceTree = "<group>";
+		};
+		3F7C9A5A213E174B003ED55D /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				3FD33787213DF14E002D18FF /* cellTableViewCell.swift */,
+				3FD33783213DF14D002D18FF /* imageTableViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		61E753CA36B8C0900356A4D9 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -209,24 +255,18 @@
 		AC1A9FCE1BAD2E0A00221043 /* Coffee Luguo */ = {
 			isa = PBXGroup;
 			children = (
+				3F7C9A5A213E174B003ED55D /* Cell */,
+				3F42D682213E24B400BE59D1 /* QRcode */,
+				3F077762213E1E39003F8D59 /* 會員區 */,
+				3F077761213E1E2E003F8D59 /* 提問區 */,
 				AC1A9FD31BAD2E0A00221043 /* Main.storyboard */,
 				AC1A9FCF1BAD2E0A00221043 /* AppDelegate.swift */,
 				AC1A9FD11BAD2E0A00221043 /* ViewController.swift */,
 				AC5DC1D41BAD517700D01AF6 /* IntroViewController.swift */,
-				3FD33787213DF14E002D18FF /* cellTableViewCell.swift */,
-				3FD33789213DF14E002D18FF /* coffeeCardViewController.swift */,
-				3FD3378A213DF14E002D18FF /* ContactsDetialTableViewCell.swift */,
-				3FD33784213DF14D002D18FF /* ContactsDetiaViewController.swift */,
-				3FD33786213DF14D002D18FF /* ContactsTableViewController.swift */,
-				3FD33783213DF14D002D18FF /* imageTableViewCell.swift */,
-				3FD33785213DF14D002D18FF /* MyCoffeeTableViewCell.swift */,
-				3FD33788213DF14E002D18FF /* MyCoffeeViewController.swift */,
-				5FD728251BAE782F0065B71A /* QRcodeViewController.swift */,
-				5FD728271BAE7B6D0065B71A /* showQroceViewController.swift */,
+				5FD728271BAE7B6D0065B71A /* ShowQroceViewController.swift */,
 				AC5DC1D81BAD585A00D01AF6 /* Header-Bridge.h */,
 				5F75E96D1BADF20300A07C75 /* Paws-Bridging-Header.h */,
 				AC5DC21E1BAD8E1C00D01AF6 /* ResultViewController.swift */,
-				AC5DC1D61BAD518A00D01AF6 /* TestViewController.swift */,
 				AC1A9FD91BAD2E0A00221043 /* Assets.xcassets */,
 				AC1A9FDB1BAD2E0A00221043 /* LaunchScreen.storyboard */,
 				AC1A9FDE1BAD2E0A00221043 /* Info.plist */,
@@ -500,7 +540,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AC5DC1D71BAD518A00D01AF6 /* TestViewController.swift in Sources */,
+				AC5DC1D71BAD518A00D01AF6 /* QuestViewController.swift in Sources */,
 				AC1A9FD21BAD2E0A00221043 /* ViewController.swift in Sources */,
 				AC5DC21B1BAD6C1100D01AF6 /* YTPlayerView.m in Sources */,
 				3FD3378C213DF14E002D18FF /* ContactsDetiaViewController.swift in Sources */,
@@ -509,10 +549,10 @@
 				5FD728261BAE782F0065B71A /* QRcodeViewController.swift in Sources */,
 				AC5DC21F1BAD8E1C00D01AF6 /* ResultViewController.swift in Sources */,
 				3FD3378F213DF14E002D18FF /* cellTableViewCell.swift in Sources */,
-				3FD33791213DF14E002D18FF /* coffeeCardViewController.swift in Sources */,
+				3FD33791213DF14E002D18FF /* CoffeeCardViewController.swift in Sources */,
 				AC5DC21D1BAD6C1100D01AF6 /* README.md in Sources */,
 				AC1A9FD81BAD2E0A00221043 /* Coffee_Luguo.xcdatamodeld in Sources */,
-				5FD728281BAE7B6D0065B71A /* showQroceViewController.swift in Sources */,
+				5FD728281BAE7B6D0065B71A /* ShowQroceViewController.swift in Sources */,
 				AC1A9FD01BAD2E0A00221043 /* AppDelegate.swift in Sources */,
 				AC5DC1D51BAD517700D01AF6 /* IntroViewController.swift in Sources */,
 				3FD33790213DF14E002D18FF /* MyCoffeeViewController.swift in Sources */,

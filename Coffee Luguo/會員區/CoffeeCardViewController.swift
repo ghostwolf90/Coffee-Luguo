@@ -1,5 +1,5 @@
 //
-//  coffeeCardViewController.swift
+//  CoffeeCardViewController.swift
 //  Coffee Luguo
 //
 //  Created by Laibit on 2015/9/19.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class coffeeCardViewController: UIViewController {
+class CoffeeCardViewController: UIViewController {
 
     @IBOutlet weak var coffeeCardView: UIImageView!
     

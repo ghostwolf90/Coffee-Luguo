@@ -1,5 +1,5 @@
 //
-//  showQroceViewController.swift
+//  ShowQroceViewController.swift
 //  Coffee Luguo
 //
 //  Created by Laibit on 2015/9/20.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class showQroceViewController: UIViewController {
+class ShowQroceViewController: UIViewController {
     
     var htmlUrl : String!
     let refreshControl = UIRefreshControl()

@@ -11,10 +11,6 @@ import UIKit
 
 class ResultViewController: UIViewController {
 
-    
-    
-    
-    
     var uTubeAdress: [String] = ["35gCiF22P0k", "35gCiF22P0k", "35gCiF22P0k", "35gCiF22P0k", "35gCiF22P0k"]
     var mainLabelText = ["極品藍山", "三多士", "哥倫比亞", "摩卡", "爪哇", "曼特寧"]
     var locationText = ["牙買加", "巴西", "哥倫比亞", "衣索比亞", "印尼", "蘇門答臘"]

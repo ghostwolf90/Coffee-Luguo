@@ -109,7 +109,7 @@ class QRcodeViewController: UIViewController, AVCaptureMetadataOutputObjectsDele
     
     func showQrcodeToWeb(){
         session.stopRunning()
-        let vc = self.storyboard?.instantiateViewController(withIdentifier: "showQrcode") as! showQroceViewController
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "showQrcode") as! ShowQroceViewController
         let nc = self.storyboard?.instantiateViewController(withIdentifier: "nc") as! UINavigationController
         nc.pushViewController(vc, animated: false)
         vc.htmlUrl = tempQrcode
