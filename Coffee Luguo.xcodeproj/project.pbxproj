@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F559791213E96F900FB6B16 /* RLM_User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F559790213E96F900FB6B16 /* RLM_User.swift */; };
+		3F559793213F6B1300FB6B16 /* RealmMigration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F559792213F6B1200FB6B16 /* RealmMigration.swift */; };
+		3F559796213F6ED000FB6B16 /* DoubleExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F559795213F6ED000FB6B16 /* DoubleExtension.swift */; };
 		3FC54710213E89ED0075C76C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC5470F213E89ED0075C76C /* LoginViewController.swift */; };
 		3FD3378B213DF14E002D18FF /* imageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD33783213DF14D002D18FF /* imageTableViewCell.swift */; };
 		3FD3378C213DF14E002D18FF /* ContactsDetiaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD33784213DF14D002D18FF /* ContactsDetiaViewController.swift */; };
@@ -23,14 +26,10 @@
 		AC1A9FD01BAD2E0A00221043 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1A9FCF1BAD2E0A00221043 /* AppDelegate.swift */; };
 		AC1A9FD21BAD2E0A00221043 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1A9FD11BAD2E0A00221043 /* ViewController.swift */; };
 		AC1A9FD51BAD2E0A00221043 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC1A9FD31BAD2E0A00221043 /* Main.storyboard */; };
-		AC1A9FD81BAD2E0A00221043 /* Coffee_Luguo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AC1A9FD61BAD2E0A00221043 /* Coffee_Luguo.xcdatamodeld */; };
 		AC1A9FDA1BAD2E0A00221043 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC1A9FD91BAD2E0A00221043 /* Assets.xcassets */; };
 		AC1A9FDD1BAD2E0A00221043 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC1A9FDB1BAD2E0A00221043 /* LaunchScreen.storyboard */; };
 		AC1A9FE81BAD2E0A00221043 /* Coffee_LuguoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1A9FE71BAD2E0A00221043 /* Coffee_LuguoTests.swift */; };
 		AC1A9FF31BAD2E0A00221043 /* Coffee_LuguoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1A9FF21BAD2E0A00221043 /* Coffee_LuguoUITests.swift */; };
-		AC1AA0031BAD356900221043 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC1AA0001BAD356900221043 /* Parse.framework */; };
-		AC1AA0171BAD35FC00221043 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = AC1AA0161BAD35FC00221043 /* libz.tbd */; };
-		AC1AA0191BAD362700221043 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = AC1AA0181BAD362700221043 /* libsqlite3.tbd */; };
 		AC5DC1D51BAD517700D01AF6 /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5DC1D41BAD517700D01AF6 /* IntroViewController.swift */; };
 		AC5DC1D71BAD518A00D01AF6 /* QuestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5DC1D61BAD518A00D01AF6 /* QuestViewController.swift */; };
 		AC5DC21A1BAD6C1100D01AF6 /* YTPlayerView-iframe-player.html in Resources */ = {isa = PBXBuildFile; fileRef = AC5DC2141BAD6C1100D01AF6 /* YTPlayerView-iframe-player.html */; };
@@ -72,6 +71,9 @@
 		3F4C1A98213DF64B00233F4E /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		3F4C1A99213DF65900233F4E /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		3F4C1A9A213DF65900233F4E /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		3F559790213E96F900FB6B16 /* RLM_User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RLM_User.swift; sourceTree = "<group>"; };
+		3F559792213F6B1200FB6B16 /* RealmMigration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmMigration.swift; sourceTree = "<group>"; };
+		3F559795213F6ED000FB6B16 /* DoubleExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoubleExtension.swift; sourceTree = "<group>"; };
 		3FC5470F213E89ED0075C76C /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		3FD33783213DF14D002D18FF /* imageTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = imageTableViewCell.swift; sourceTree = "<group>"; };
 		3FD33784213DF14D002D18FF /* ContactsDetiaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactsDetiaViewController.swift; sourceTree = "<group>"; };
@@ -92,7 +94,6 @@
 		AC1A9FCF1BAD2E0A00221043 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AC1A9FD11BAD2E0A00221043 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		AC1A9FD41BAD2E0A00221043 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		AC1A9FD71BAD2E0A00221043 /* Coffee_Luguo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Coffee_Luguo.xcdatamodel; sourceTree = "<group>"; };
 		AC1A9FD91BAD2E0A00221043 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AC1A9FDC1BAD2E0A00221043 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AC1A9FDE1BAD2E0A00221043 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -123,9 +124,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AC1AA0191BAD362700221043 /* libsqlite3.tbd in Frameworks */,
-				AC1AA0171BAD35FC00221043 /* libz.tbd in Frameworks */,
-				AC1AA0031BAD356900221043 /* Parse.framework in Frameworks */,
 				A8FF2BFCA503C36E65E43424 /* Pods_Coffee_Luguo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -185,6 +183,32 @@
 				5FD728251BAE782F0065B71A /* QRcodeViewController.swift */,
 			);
 			path = QRcode;
+			sourceTree = "<group>";
+		};
+		3F55978E213E96C400FB6B16 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3F559794213F6EC100FB6B16 /* Extension */,
+				3F55978F213E96D200FB6B16 /* RealmModel */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3F55978F213E96D200FB6B16 /* RealmModel */ = {
+			isa = PBXGroup;
+			children = (
+				3F559792213F6B1200FB6B16 /* RealmMigration.swift */,
+				3F559790213E96F900FB6B16 /* RLM_User.swift */,
+			);
+			path = RealmModel;
+			sourceTree = "<group>";
+		};
+		3F559794213F6EC100FB6B16 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				3F559795213F6ED000FB6B16 /* DoubleExtension.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 		3F7C9A5A213E174B003ED55D /* Cell */ = {
@@ -258,6 +282,7 @@
 		AC1A9FCE1BAD2E0A00221043 /* Coffee Luguo */ = {
 			isa = PBXGroup;
 			children = (
+				3F55978E213E96C400FB6B16 /* Model */,
 				3F7C9A5A213E174B003ED55D /* Cell */,
 				3F42D682213E24B400BE59D1 /* QRcode */,
 				3F077762213E1E39003F8D59 /* 會員區 */,
@@ -273,7 +298,6 @@
 				AC1A9FD91BAD2E0A00221043 /* Assets.xcassets */,
 				AC1A9FDB1BAD2E0A00221043 /* LaunchScreen.storyboard */,
 				AC1A9FDE1BAD2E0A00221043 /* Info.plist */,
-				AC1A9FD61BAD2E0A00221043 /* Coffee_Luguo.xcdatamodeld */,
 			);
 			path = "Coffee Luguo";
 			sourceTree = "<group>";
@@ -528,6 +552,9 @@
 				"${BUILT_PRODUCTS_DIR}/FacebookCore/FacebookCore.framework",
 				"${BUILT_PRODUCTS_DIR}/FacebookLogin/FacebookLogin.framework",
 				"${BUILT_PRODUCTS_DIR}/FacebookShare/FacebookShare.framework",
+				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/youtube-ios-player-helper/youtube_ios_player_helper.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -539,6 +566,9 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookCore.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookLogin.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookShare.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/youtube_ios_player_helper.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -556,16 +586,18 @@
 				AC5DC1D71BAD518A00D01AF6 /* QuestViewController.swift in Sources */,
 				AC1A9FD21BAD2E0A00221043 /* ViewController.swift in Sources */,
 				AC5DC21B1BAD6C1100D01AF6 /* YTPlayerView.m in Sources */,
+				3F559791213E96F900FB6B16 /* RLM_User.swift in Sources */,
 				3FD3378C213DF14E002D18FF /* ContactsDetiaViewController.swift in Sources */,
 				3FC54710213E89ED0075C76C /* LoginViewController.swift in Sources */,
 				3FD3378E213DF14E002D18FF /* ContactsTableViewController.swift in Sources */,
 				3FD3378D213DF14E002D18FF /* MyCoffeeTableViewCell.swift in Sources */,
 				5FD728261BAE782F0065B71A /* QRcodeViewController.swift in Sources */,
 				AC5DC21F1BAD8E1C00D01AF6 /* ResultViewController.swift in Sources */,
+				3F559793213F6B1300FB6B16 /* RealmMigration.swift in Sources */,
 				3FD3378F213DF14E002D18FF /* cellTableViewCell.swift in Sources */,
+				3F559796213F6ED000FB6B16 /* DoubleExtension.swift in Sources */,
 				3FD33791213DF14E002D18FF /* CoffeeCardViewController.swift in Sources */,
 				AC5DC21D1BAD6C1100D01AF6 /* README.md in Sources */,
-				AC1A9FD81BAD2E0A00221043 /* Coffee_Luguo.xcdatamodeld in Sources */,
 				5FD728281BAE7B6D0065B71A /* ShowQroceViewController.swift in Sources */,
 				AC1A9FD01BAD2E0A00221043 /* AppDelegate.swift in Sources */,
 				AC5DC1D51BAD517700D01AF6 /* IntroViewController.swift in Sources */,
@@ -839,19 +871,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		AC1A9FD61BAD2E0A00221043 /* Coffee_Luguo.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				AC1A9FD71BAD2E0A00221043 /* Coffee_Luguo.xcdatamodel */,
-			);
-			currentVersion = AC1A9FD71BAD2E0A00221043 /* Coffee_Luguo.xcdatamodel */;
-			path = Coffee_Luguo.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = AC1A9FC41BAD2E0A00221043 /* Project object */;
 }

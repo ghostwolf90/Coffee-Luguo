@@ -24,12 +24,20 @@ PODS:
     - FBSDKCoreKit
   - FBSDKShareKit (4.36.0):
     - FBSDKCoreKit (~> 4.36.0)
+  - ObjectMapper (3.3.0)
+  - Realm (3.0.2):
+    - Realm/Headers (= 3.0.2)
+  - Realm/Headers (3.0.2)
+  - RealmSwift (3.0.2):
+    - Realm (= 3.0.2)
   - youtube-ios-player-helper (0.1.4)
 
 DEPENDENCIES:
   - FacebookCore
   - FacebookLogin
   - FacebookShare
+  - ObjectMapper
+  - RealmSwift (~> 3.0.2)
   - youtube-ios-player-helper (~> 0.1.4)
 
 SPEC REPOS:
@@ -41,6 +49,9 @@ SPEC REPOS:
     - FBSDKCoreKit
     - FBSDKLoginKit
     - FBSDKShareKit
+    - ObjectMapper
+    - Realm
+    - RealmSwift
     - youtube-ios-player-helper
 
 SPEC CHECKSUMS:
@@ -51,8 +62,11 @@ SPEC CHECKSUMS:
   FBSDKCoreKit: 3b8e6570eedb443f9fc4af196a7bf39f18e3a3d8
   FBSDKLoginKit: 8bccb6064708ab2f4251a7fc4e3b6d8d00ad91ba
   FBSDKShareKit: 7090fdd55c39b03941efddb64c83a64ff6b3949f
+  ObjectMapper: b612bf8c8e99c4dc0bb6013a51f7c27966ed5da9
+  Realm: 6f23fd1f178a09342eac21bfa7c2bf4312a7a180
+  RealmSwift: 695393add1b8f9d5fa75dd16e6355cf3935f71e2
   youtube-ios-player-helper: 84b1485ebb4b7c6b619c6e05edcb55186723a7c6
 
-PODFILE CHECKSUM: 6114492f57c359d4afa7be04a1f31a012365cc0a
+PODFILE CHECKSUM: f3547ca474f84cf27acfba4c1067b454cbae5eb2
 
 COCOAPODS: 1.5.3

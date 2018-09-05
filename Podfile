@@ -6,6 +6,8 @@ target 'Coffee Luguo' do
 pod 'FacebookCore'
 pod 'FacebookLogin'
 pod 'FacebookShare'
+pod 'RealmSwift','~> 3.0.2'
+pod 'ObjectMapper'
 pod 'youtube-ios-player-helper', '~> 0.1.4'
 end
 

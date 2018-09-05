@@ -331,26 +331,50 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bfy-Bz-UTA">
-                                <rect key="frame" x="122" y="490" width="131" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="loginWithFacebook"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bfy-Bz-UTA">
+                                <rect key="frame" x="31" y="559" width="313" height="48"/>
+                                <color key="backgroundColor" red="0.25882352941176467" green="0.40392156862745099" blue="0.69803921568627447" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="wfG-8a-qPv"/>
+                                </constraints>
+                                <state key="normal" title="Continue with Facebook">
+                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="loginWithFacebookPressed:" destination="7qz-gq-qZa" eventType="touchUpInside" id="60W-6l-30K"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Coffee" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F8B-Kt-d4k">
+                                <rect key="frame" x="49" y="28" width="277" height="96"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="96" id="bgR-yj-X2E"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="PingFangTC-Regular" family="PingFang TC" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="F8B-Kt-d4k" firstAttribute="top" secondItem="LmF-3E-aGF" secondAttribute="bottom" constant="8" id="4Aq-ML-6ld"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="F8B-Kt-d4k" secondAttribute="trailing" constant="33" id="AEe-eA-MOT"/>
+                            <constraint firstItem="6BA-gq-NrI" firstAttribute="top" secondItem="Bfy-Bz-UTA" secondAttribute="bottom" constant="60" id="Ekq-kM-eYX"/>
+                            <constraint firstItem="F8B-Kt-d4k" firstAttribute="leading" secondItem="jtz-qy-d5s" secondAttribute="leadingMargin" constant="33" id="TN6-PB-Wid"/>
+                            <constraint firstItem="Bfy-Bz-UTA" firstAttribute="leading" secondItem="jtz-qy-d5s" secondAttribute="leadingMargin" constant="15" id="VkP-F2-aNU"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Bfy-Bz-UTA" secondAttribute="trailing" constant="15" id="Vu7-TM-NGN"/>
+                            <constraint firstItem="Bfy-Bz-UTA" firstAttribute="centerX" secondItem="jtz-qy-d5s" secondAttribute="centerX" id="uPH-OM-uYX"/>
+                            <constraint firstItem="F8B-Kt-d4k" firstAttribute="centerX" secondItem="jtz-qy-d5s" secondAttribute="centerX" id="yxY-dw-rgT"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="q7m-fv-rbq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1892" y="249"/>
+            <point key="canvasLocation" x="-1892" y="248.72563718140933"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Mye-SP-ntA">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="fOx-NJ-vpG" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="indexTabBarViewController" automaticallyAdjustsScrollViewInsets="NO" id="fOx-NJ-vpG" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="XEZ-dP-3Vn">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
@@ -746,6 +770,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="eKM-y2-xaG"/>
+        <segue reference="fXa-ls-wrf"/>
     </inferredMetricsTieBreakers>
 </document>
