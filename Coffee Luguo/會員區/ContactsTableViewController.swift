@@ -20,9 +20,10 @@ class ContactsTableViewController: UIViewController {
         let alertController = UIAlertController(title: "系统提示",
                                                 message: "您確定要登出吗？", preferredStyle: UIAlertControllerStyle.alert)
         let cancelAction = UIAlertAction(title: "取消", style: UIAlertActionStyle.cancel, handler: nil)
-        let okAction = UIAlertAction(title: "確定", style: UIAlertActionStyle.default,
-                                     handler: { action in
-                                        print("點擊了确定")
+        let okAction = UIAlertAction(title: "確定", style: UIAlertActionStyle.default, handler: { action in
+            RLM_UserUtil.sharedInstance.deleteUser()
+            Helper.backToLogin()
+            //TODO: 增加FB登出
         })
         alertController.addAction(cancelAction)
         alertController.addAction(okAction)

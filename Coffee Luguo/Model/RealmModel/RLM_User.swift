@@ -63,11 +63,21 @@ struct RLM_UserUtil{
         }catch let error {
             //CrashReport.log(error.localizedDescription)
             //CrashReport.log("\(user.userid) 存入DB失敗")
-            print("\(user.userid) 存入DB失敗")
+            print("\(user.userid) 存入DB失敗 原因\(error.localizedDescription)")
             completion(false)
         }
     }
     
+    ///清除使用者
+    func deleteUser(){
+        if let user = realm.objects(RLM_User.self).first {
+            try! realm.write {
+                realm.delete(user)
+            }
+        }
+    }
+    
+    ///取得使用者登入資料
     func getUser() -> RLM_User{
         let user = realm.objects(RLM_User.self)
         guard user.count > 0 else {

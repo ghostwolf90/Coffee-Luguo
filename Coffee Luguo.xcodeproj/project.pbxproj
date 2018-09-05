@@ -10,6 +10,7 @@
 		3F559791213E96F900FB6B16 /* RLM_User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F559790213E96F900FB6B16 /* RLM_User.swift */; };
 		3F559793213F6B1300FB6B16 /* RealmMigration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F559792213F6B1200FB6B16 /* RealmMigration.swift */; };
 		3F559796213F6ED000FB6B16 /* DoubleExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F559795213F6ED000FB6B16 /* DoubleExtension.swift */; };
+		3F55979A213F7E8D00FB6B16 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F559799213F7E8D00FB6B16 /* Helper.swift */; };
 		3FC54710213E89ED0075C76C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC5470F213E89ED0075C76C /* LoginViewController.swift */; };
 		3FD3378B213DF14E002D18FF /* imageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD33783213DF14D002D18FF /* imageTableViewCell.swift */; };
 		3FD3378C213DF14E002D18FF /* ContactsDetiaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD33784213DF14D002D18FF /* ContactsDetiaViewController.swift */; };
@@ -74,6 +75,7 @@
 		3F559790213E96F900FB6B16 /* RLM_User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RLM_User.swift; sourceTree = "<group>"; };
 		3F559792213F6B1200FB6B16 /* RealmMigration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmMigration.swift; sourceTree = "<group>"; };
 		3F559795213F6ED000FB6B16 /* DoubleExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoubleExtension.swift; sourceTree = "<group>"; };
+		3F559799213F7E8D00FB6B16 /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		3FC5470F213E89ED0075C76C /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		3FD33783213DF14D002D18FF /* imageTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = imageTableViewCell.swift; sourceTree = "<group>"; };
 		3FD33784213DF14D002D18FF /* ContactsDetiaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactsDetiaViewController.swift; sourceTree = "<group>"; };
@@ -188,6 +190,7 @@
 		3F55978E213E96C400FB6B16 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				3F559798213F7E6E00FB6B16 /* Utility */,
 				3F559794213F6EC100FB6B16 /* Extension */,
 				3F55978F213E96D200FB6B16 /* RealmModel */,
 			);
@@ -209,6 +212,14 @@
 				3F559795213F6ED000FB6B16 /* DoubleExtension.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		3F559798213F7E6E00FB6B16 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				3F559799213F7E8D00FB6B16 /* Helper.swift */,
+			);
+			path = Utility;
 			sourceTree = "<group>";
 		};
 		3F7C9A5A213E174B003ED55D /* Cell */ = {
@@ -594,6 +605,7 @@
 				5FD728261BAE782F0065B71A /* QRcodeViewController.swift in Sources */,
 				AC5DC21F1BAD8E1C00D01AF6 /* ResultViewController.swift in Sources */,
 				3F559793213F6B1300FB6B16 /* RealmMigration.swift in Sources */,
+				3F55979A213F7E8D00FB6B16 /* Helper.swift in Sources */,
 				3FD3378F213DF14E002D18FF /* cellTableViewCell.swift in Sources */,
 				3F559796213F6ED000FB6B16 /* DoubleExtension.swift in Sources */,
 				3FD33791213DF14E002D18FF /* CoffeeCardViewController.swift in Sources */,

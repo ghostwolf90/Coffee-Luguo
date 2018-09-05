@@ -322,7 +322,7 @@
         <!--Login View Controller-->
         <scene sceneID="iaA-di-Nl2">
             <objects>
-                <viewController id="7qz-gq-qZa" customClass="LoginViewController" customModule="Coffee_Luguo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginViewController" id="7qz-gq-qZa" customClass="LoginViewController" customModule="Coffee_Luguo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="LmF-3E-aGF"/>
                         <viewControllerLayoutGuide type="bottom" id="6BA-gq-NrI"/>
