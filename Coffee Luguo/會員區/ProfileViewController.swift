@@ -1,5 +1,5 @@
 //
-//  ContactsTableViewController.swift
+//  ProfileViewController.swift
 //  Coffee Luguo
 //
 //  Created by Laibit on 2015/9/19.
@@ -7,18 +7,21 @@
 //
 
 import UIKit
+import FacebookLogin
+import FacebookCore
 
-class ContactsTableViewController: UIViewController {
+class ProfileViewController: UIViewController {
     
-    var titleName = ["我的資料", "我的咖啡卡", "我的咖啡紀錄"]
+    var titleNames = ["頭像","我的資料", "我的咖啡卡", "我的咖啡紀錄", "登出"]
+    var user = RLM_User()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        user = RLM_UserUtil.sharedInstance.getUser()
     }
     
-    @IBAction func logOutButton(_ sender: UIBarButtonItem) {
-        let alertController = UIAlertController(title: "系统提示",
-                                                message: "您確定要登出吗？", preferredStyle: UIAlertControllerStyle.alert)
+    func logOut(){
+        let alertController = UIAlertController(title: "系统提示", message: "您確定要登出吗？", preferredStyle: UIAlertControllerStyle.alert)
         let cancelAction = UIAlertAction(title: "取消", style: UIAlertActionStyle.cancel, handler: nil)
         let okAction = UIAlertAction(title: "確定", style: UIAlertActionStyle.default, handler: { action in
             RLM_UserUtil.sharedInstance.deleteUser()
@@ -36,10 +39,10 @@ class ContactsTableViewController: UIViewController {
     }
 }
 
-extension ContactsTableViewController{
+extension ProfileViewController{
     
     //個人資料
-    func showContacts(){
+    func showProfile(){
         let contacts_vc = self.storyboard?.instantiateViewController(withIdentifier: "ContactsDetiaViewController") as! ContactsDetiaViewController
         self.show(contacts_vc, sender: self)
     }
@@ -58,21 +61,21 @@ extension ContactsTableViewController{
     
 }
 
-extension ContactsTableViewController: UITableViewDelegate, UITableViewDataSource {
+extension ProfileViewController: UITableViewDelegate, UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 4
+        return titleNames.count
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if indexPath.row == 0 {
-            return 350
+            return 200
         }
-        return 80
+        return 64
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -80,28 +83,32 @@ extension ContactsTableViewController: UITableViewDelegate, UITableViewDataSourc
         switch indexPath.row {
         case 0 :
             let imageCell = tableView.dequeueReusableCell(withIdentifier: "imageCell", for: indexPath as IndexPath) as! imageTableViewCell
-            imageCell.imageView?.image = UIImage(named:"coffeeL.jpg")
+            do {
+                let imageData = try Data(contentsOf: URL(string: user.picture)!)
+                imageCell.profileImage.image = UIImage(data: imageData)
+                imageCell.profileImage.clipsToBounds = true
+                imageCell.profileImage.layer.cornerRadius = 30
+            } catch {
+                print("Unable to load data: \(error)")
+            }                                    
             return imageCell
         default :
             let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath as IndexPath) as! cellTableViewCell
-            cell.firstLabel.text = titleName[indexPath.row - 1]
+            cell.firstLabel.text = titleNames[indexPath.row]
             return cell
         }
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         switch indexPath.row {
-        case 0 :
-            print("0")
         case 1 :
-            print("1")
-            showContacts()
+            showProfile()
         case 2 :
-            print("2")
             showCoffeeCard()
         case 3 :
-            print("3")
             showMyCoffee()
+        case 4:
+            logOut()
         default:
             print("")
         }

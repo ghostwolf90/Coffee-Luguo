@@ -15,7 +15,7 @@
 		3FD3378B213DF14E002D18FF /* imageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD33783213DF14D002D18FF /* imageTableViewCell.swift */; };
 		3FD3378C213DF14E002D18FF /* ContactsDetiaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD33784213DF14D002D18FF /* ContactsDetiaViewController.swift */; };
 		3FD3378D213DF14E002D18FF /* MyCoffeeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD33785213DF14D002D18FF /* MyCoffeeTableViewCell.swift */; };
-		3FD3378E213DF14E002D18FF /* ContactsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD33786213DF14D002D18FF /* ContactsTableViewController.swift */; };
+		3FD3378E213DF14E002D18FF /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD33786213DF14D002D18FF /* ProfileViewController.swift */; };
 		3FD3378F213DF14E002D18FF /* cellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD33787213DF14E002D18FF /* cellTableViewCell.swift */; };
 		3FD33790213DF14E002D18FF /* MyCoffeeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD33788213DF14E002D18FF /* MyCoffeeViewController.swift */; };
 		3FD33791213DF14E002D18FF /* CoffeeCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD33789213DF14E002D18FF /* CoffeeCardViewController.swift */; };
@@ -80,7 +80,7 @@
 		3FD33783213DF14D002D18FF /* imageTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = imageTableViewCell.swift; sourceTree = "<group>"; };
 		3FD33784213DF14D002D18FF /* ContactsDetiaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactsDetiaViewController.swift; sourceTree = "<group>"; };
 		3FD33785213DF14D002D18FF /* MyCoffeeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyCoffeeTableViewCell.swift; sourceTree = "<group>"; };
-		3FD33786213DF14D002D18FF /* ContactsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactsTableViewController.swift; sourceTree = "<group>"; };
+		3FD33786213DF14D002D18FF /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		3FD33787213DF14E002D18FF /* cellTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = cellTableViewCell.swift; sourceTree = "<group>"; };
 		3FD33788213DF14E002D18FF /* MyCoffeeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyCoffeeViewController.swift; sourceTree = "<group>"; };
 		3FD33789213DF14E002D18FF /* CoffeeCardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoffeeCardViewController.swift; sourceTree = "<group>"; };
@@ -161,7 +161,7 @@
 			isa = PBXGroup;
 			children = (
 				3F077763213E21EB003F8D59 /* Cell */,
-				3FD33786213DF14D002D18FF /* ContactsTableViewController.swift */,
+				3FD33786213DF14D002D18FF /* ProfileViewController.swift */,
 				3FD33784213DF14D002D18FF /* ContactsDetiaViewController.swift */,
 				3FD33789213DF14E002D18FF /* CoffeeCardViewController.swift */,
 				3FD33788213DF14E002D18FF /* MyCoffeeViewController.swift */,
@@ -172,6 +172,8 @@
 		3F077763213E21EB003F8D59 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				3FD33787213DF14E002D18FF /* cellTableViewCell.swift */,
+				3FD33783213DF14D002D18FF /* imageTableViewCell.swift */,
 				3FD33785213DF14D002D18FF /* MyCoffeeTableViewCell.swift */,
 				3FD3378A213DF14E002D18FF /* ContactsDetialTableViewCell.swift */,
 			);
@@ -220,15 +222,6 @@
 				3F559799213F7E8D00FB6B16 /* Helper.swift */,
 			);
 			path = Utility;
-			sourceTree = "<group>";
-		};
-		3F7C9A5A213E174B003ED55D /* Cell */ = {
-			isa = PBXGroup;
-			children = (
-				3FD33787213DF14E002D18FF /* cellTableViewCell.swift */,
-				3FD33783213DF14D002D18FF /* imageTableViewCell.swift */,
-			);
-			path = Cell;
 			sourceTree = "<group>";
 		};
 		61E753CA36B8C0900356A4D9 /* Pods */ = {
@@ -294,7 +287,6 @@
 			isa = PBXGroup;
 			children = (
 				3F55978E213E96C400FB6B16 /* Model */,
-				3F7C9A5A213E174B003ED55D /* Cell */,
 				3F42D682213E24B400BE59D1 /* QRcode */,
 				3F077762213E1E39003F8D59 /* 會員區 */,
 				3F077761213E1E2E003F8D59 /* 提問區 */,
@@ -600,7 +592,7 @@
 				3F559791213E96F900FB6B16 /* RLM_User.swift in Sources */,
 				3FD3378C213DF14E002D18FF /* ContactsDetiaViewController.swift in Sources */,
 				3FC54710213E89ED0075C76C /* LoginViewController.swift in Sources */,
-				3FD3378E213DF14E002D18FF /* ContactsTableViewController.swift in Sources */,
+				3FD3378E213DF14E002D18FF /* ProfileViewController.swift in Sources */,
 				3FD3378D213DF14E002D18FF /* MyCoffeeTableViewCell.swift in Sources */,
 				5FD728261BAE782F0065B71A /* QRcodeViewController.swift in Sources */,
 				AC5DC21F1BAD8E1C00D01AF6 /* ResultViewController.swift in Sources */,
