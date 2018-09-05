@@ -7,3 +7,7 @@ Coffee-Luguo
 
 ## 使用技術部份
 * [增加Facebook登入機制（facebook login）](#facebook-login)
+
+### 增加Facebook登入機制（facebook login）
+
+[Facebook SDK說明](https://developers.facebook.com/docs/facebook-login/userexperience#buttondesign "Title")
