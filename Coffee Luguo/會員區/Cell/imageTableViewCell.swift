@@ -11,6 +11,7 @@ import UIKit
 class imageTableViewCell: UITableViewCell {
     
     @IBOutlet weak var profileImage: UIImageView!
+    @IBOutlet weak var profileNameLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

@@ -12,29 +12,17 @@ import UIKit
 class QuestViewController: UIViewController {
 
     @IBOutlet weak var headLabelLeadConst: NSLayoutConstraint!
-    
     @IBOutlet weak var subTextLeadConst: NSLayoutConstraint!
-    
     @IBOutlet weak var leftButtonButtomConst: NSLayoutConstraint!
-    
     @IBOutlet weak var rightButtonButtomConst: NSLayoutConstraint!
-    
     @IBOutlet weak var utubeView: YTPlayerView!
-    
     @IBOutlet weak var headLabel: UILabel!
-    
     @IBOutlet weak var subTextView: UITextView!
-    
     @IBOutlet weak var rightLabel: UILabel!
-    
     @IBOutlet weak var leftLabel: UILabel!
-    
     @IBOutlet weak var sliderBar: UISlider!
-    
     @IBOutlet weak var leftButton: UIButton!
-    
-    @IBOutlet weak var rightButton: UIButton!
-    
+    @IBOutlet weak var rightButton: UIButton!    
     
     //youtube
     var youtubeIDs: [String] = ["ma7r2HGqwXs", "Lhel0tzHE08", "35gCiF22P0k", "35gCiF22P0k", "35gCiF22P0k"]
@@ -49,7 +37,7 @@ class QuestViewController: UIViewController {
     
     //question
     var questionIndex = 0
-    var dataAnswer: [Float] = [0, 0, 0, 0, 0]
+    var answers: [Float] = [0, 0, 0, 0, 0]
     var totalName = ["RankJmaica", "RankBazil", "RankColombia", "RankEthiopia", "RankIndonesia", "RankSumatra"]
     var totalRank: [[Float]] = [[3, 3, 1, 3, 2], [2, 3, 2, 2, 1], [3, 2, 2, 3, 1], [3, 2, 2, 3, 2], [1, 2, 1, 2, 3], [3, 2, 1, 2, 3]]
     var RankJmaica = [3, 3, 1, 3, 2]
@@ -58,15 +46,19 @@ class QuestViewController: UIViewController {
     var RankEthiopia = [3, 2, 2, 3, 2]
     var RankIndonesia = [1, 2, 1, 2, 3]
     var RankSumatra = [3, 2, 1, 2, 3]
-    
+    var answer = 0
     var result = [Float]()
     var resultIndex = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // Do any additional setup after loading the view.
+        initView()
         self.swichText(index: 0)
+    }
+    
+    func initView(){
+        leftButton.layer.cornerRadius = 8
+        rightButton.layer.cornerRadius = 8
     }
 
     override func didReceiveMemoryWarning() {
@@ -82,7 +74,6 @@ class QuestViewController: UIViewController {
         self.utubeView.load(withVideoId: youtubeIDs[questionIndex])
     }
 
-    
 //calculate
     func calculateScore() -> [Float] {
         var score: [Float] = [0, 0, 0, 0, 0, 0]
@@ -91,7 +82,7 @@ class QuestViewController: UIViewController {
             var i = 0
             var singleScore: Float = 0
             for num in rank {
-                singleScore += num * (self.dataAnswer[i])
+                singleScore += num * (self.answers[i])
                 i+=1
             }
             score[index] = singleScore
@@ -160,7 +151,6 @@ class QuestViewController: UIViewController {
     }
 }
 
-
 //MARK: Button事件
 extension QuestViewController{
     
@@ -169,39 +159,39 @@ extension QuestViewController{
         switch self.questionIndex {
         case 0 :
             //香氣
-            self.dataAnswer[0] = self.sliderBar.value
-            self.animateButton(index: 0, forward: true)
-            self.questionIndex += 1
-            self.sliderBar.setValue(self.dataAnswer[self.questionIndex], animated: true)
+            answers[0] = self.sliderBar.value
+            animateButton(index: 0, forward: true)
+            questionIndex += 1
+            sliderBar.setValue(self.answers[self.questionIndex], animated: true)
             
         case 1 :
             //回甘
-            self.dataAnswer[1] = self.sliderBar.value
-            self.animateButton(index: 1, forward: true)
-            self.questionIndex += 1
-            self.sliderBar.setValue(self.dataAnswer[self.questionIndex], animated: true)
+            answers[1] = self.sliderBar.value
+            animateButton(index: 1, forward: true)
+            questionIndex += 1
+            sliderBar.setValue(self.answers[self.questionIndex], animated: true)
             
         case 2 :
             //酸感
-            self.dataAnswer[2] = self.sliderBar.value
-            self.animateButton(index: 2, forward: true)
-            self.questionIndex += 1
-            self.sliderBar.setValue(self.dataAnswer[self.questionIndex], animated: true)
+            answers[2] = self.sliderBar.value
+            animateButton(index: 2, forward: true)
+            questionIndex += 1
+            sliderBar.setValue(self.answers[self.questionIndex], animated: true)
         case 3 :
             //香醇
-            self.dataAnswer[3] = self.sliderBar.value
-            self.animateButton(index: 3, forward: true)
-            self.questionIndex += 1
-            self.sliderBar.setValue(self.dataAnswer[self.questionIndex], animated: true)
+            answers[3] = self.sliderBar.value
+            animateButton(index: 3, forward: true)
+            questionIndex += 1
+            sliderBar.setValue(self.answers[self.questionIndex], animated: true)
             
         case 4 :
             //苦味 => 進入答案
-            self.dataAnswer[4] = self.sliderBar.value
+            self.answers[4] = self.sliderBar.value
             self.result = self.calculateScore()
             //self.resultIndex = self.result.indexOf(self.result.maxElement()!)!
             
-            print("max element: \(self.resultIndex)")
-            print(self.dataAnswer)
+            print("max element: \(resultIndex)")
+            print(answers)
             self.performSegue(withIdentifier: "ResultSegue", sender: self)
             return
             
@@ -209,6 +199,14 @@ extension QuestViewController{
             print("final")
         }
         openYoutube(questionIndex: questionIndex)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "ResultSegue" {
+            if let destinationVC = segue.destination as? ResultViewController {
+                destinationVC.result = answer
+            }
+        }
     }
     
     @IBAction func leftButtonTouch(_ sender: AnyObject) {
@@ -221,29 +219,29 @@ extension QuestViewController{
             //end
         case 1 :
             //回甘
-            self.dataAnswer[1] = self.sliderBar.value
-            self.animateButton(index: 1, forward: false)
-            self.questionIndex -= 1
-            self.sliderBar.setValue(self.dataAnswer[self.questionIndex], animated: true)
+            answers[1] = self.sliderBar.value
+            animateButton(index: 1, forward: false)
+            questionIndex -= 1
+            sliderBar.setValue(self.answers[self.questionIndex], animated: true)
         case 2 :
             //酸感
-            self.dataAnswer[2] = self.sliderBar.value
-            self.animateButton(index: 2, forward: false)
-            self.questionIndex -= 1
-            self.sliderBar.setValue(self.dataAnswer[self.questionIndex], animated: true)
+            answers[2] = self.sliderBar.value
+            animateButton(index: 2, forward: false)
+            questionIndex -= 1
+            sliderBar.setValue(self.answers[self.questionIndex], animated: true)
         case 3 :
             //香醇
-            self.dataAnswer[3] = self.sliderBar.value
-            self.animateButton(index: 3, forward: false)
-            self.questionIndex -= 1
-            self.sliderBar.setValue(self.dataAnswer[self.questionIndex], animated: true)
+            answers[3] = self.sliderBar.value
+            animateButton(index: 3, forward: false)
+            questionIndex -= 1
+            sliderBar.setValue(self.answers[self.questionIndex], animated: true)
             
         case 4 :
             //苦味 => 回去
-            self.dataAnswer[4] = self.sliderBar.value
-            self.animateButton(index: 4, forward: false)
-            self.questionIndex -= 1
-            self.sliderBar.setValue(self.dataAnswer[self.questionIndex], animated: true)
+            answers[4] = self.sliderBar.value
+            animateButton(index: 4, forward: false)
+            questionIndex -= 1
+            sliderBar.setValue(self.answers[self.questionIndex], animated: true)
         default :
             print("final")
             

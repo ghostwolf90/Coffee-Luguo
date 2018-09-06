@@ -12,12 +12,22 @@ import FacebookCore
 
 class ProfileViewController: UIViewController {
     
-    var titleNames = ["頭像","我的資料", "我的咖啡卡", "我的咖啡紀錄", "登出"]
+    var titleNames = ["頭像", "我的咖啡卡", "我的咖啡紀錄", "登出"]
     var user = RLM_User()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         user = RLM_UserUtil.sharedInstance.getUser()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.setNavigationBarHidden(true, animated: animated)
+        super.viewWillAppear(animated)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        self.navigationController?.setNavigationBarHidden(false, animated: animated)
+        super.viewWillDisappear(animated)
     }
     
     func logOut(){
@@ -39,14 +49,7 @@ class ProfileViewController: UIViewController {
     }
 }
 
-extension ProfileViewController{
-    
-    //個人資料
-    func showProfile(){
-        let contacts_vc = self.storyboard?.instantiateViewController(withIdentifier: "ContactsDetiaViewController") as! ContactsDetiaViewController
-        self.show(contacts_vc, sender: self)
-    }
-    
+extension ProfileViewController{    
     //咖啡卡
     func showCoffeeCard(){
         let coffee_vc = self.storyboard?.instantiateViewController(withIdentifier: "CoffeeCardViewController") as! CoffeeCardViewController
@@ -85,9 +88,10 @@ extension ProfileViewController: UITableViewDelegate, UITableViewDataSource {
             let imageCell = tableView.dequeueReusableCell(withIdentifier: "imageCell", for: indexPath as IndexPath) as! imageTableViewCell
             do {
                 let imageData = try Data(contentsOf: URL(string: user.picture)!)
+                imageCell.profileNameLabel.text = user.name
                 imageCell.profileImage.image = UIImage(data: imageData)
                 imageCell.profileImage.clipsToBounds = true
-                imageCell.profileImage.layer.cornerRadius = 30
+                imageCell.profileImage.layer.cornerRadius = 40
             } catch {
                 print("Unable to load data: \(error)")
             }                                    
@@ -102,12 +106,10 @@ extension ProfileViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         switch indexPath.row {
         case 1 :
-            showProfile()
-        case 2 :
             showCoffeeCard()
-        case 3 :
+        case 2 :
             showMyCoffee()
-        case 4:
+        case 3:
             logOut()
         default:
             print("")
