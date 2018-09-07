@@ -1,4 +1,4 @@
-# 咖啡分類帽
+# 咖啡分類帽 ![](https://img.shields.io/badge/language-swift-orange.svg)
 
 Coffee-Luguo
 咖啡分類帽能根據你每天的提問來建議你該喝什麼咖啡
