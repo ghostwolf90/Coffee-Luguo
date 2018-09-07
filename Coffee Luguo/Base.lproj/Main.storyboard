@@ -404,13 +404,13 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5ib-mD-Bc8">
-                                                    <rect key="frame" x="10" y="10" width="355" height="24"/>
+                                                    <rect key="frame" x="10" y="10" width="323" height="24"/>
                                                     <fontDescription key="fontDescription" name="PingFangTC-Regular" family="PingFang TC" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalCompressionResistancePriority="749" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tLM-qi-55J">
-                                                    <rect key="frame" x="10" y="42" width="355" height="98"/>
+                                                    <rect key="frame" x="10" y="42" width="323" height="98"/>
                                                     <string key="text">是咖啡老饕的最愛之一。
 而位於南美厄瓜多海域加拉巴哥群島的海龜咖啡，更被譽為精品咖啡中的稀有珍珠。至於喜歡厚重感的咖啡，丁小雨說可以試試肯亞或祕魯咖啡，肯亞是目前全世界還在用古老日曬法製成咖啡，肯亞卡佳AATOP 的咖啡果肉香氣很重，然後帶點微酸，也深獲老饕芳心</string>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -596,12 +596,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="kpc-vR-9Mz">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="kpc-vR-9Mz">
                                 <rect key="frame" x="0.0" y="72" width="375" height="546"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="imageCell" rowHeight="200" id="rvK-Lv-Yem" customClass="imageTableViewCell" customModule="Coffee_Luguo" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="200"/>
+                                        <rect key="frame" x="0.0" y="55.5" width="375" height="200"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="rvK-Lv-Yem" id="1ue-ba-R1U">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="199.5"/>
@@ -623,12 +623,22 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XcW-B6-OzD">
+                                                    <rect key="frame" x="322" y="10" width="30" height="36"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="36" id="ws4-g2-xLH"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="PingFangTC-Regular" family="PingFang TC" pointSize="17"/>
+                                                    <state key="normal" title="..."/>
+                                                </button>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="fsr-4c-YeT" firstAttribute="top" secondItem="1ue-ba-R1U" secondAttribute="topMargin" constant="20" id="5HI-9p-Gd9"/>
                                                 <constraint firstItem="fsr-4c-YeT" firstAttribute="leading" secondItem="1ue-ba-R1U" secondAttribute="leadingMargin" constant="132.5" id="HSH-yC-x9O"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="fsr-4c-YeT" secondAttribute="trailing" constant="132.5" id="KgN-dI-sjr"/>
+                                                <constraint firstItem="XcW-B6-OzD" firstAttribute="top" secondItem="1ue-ba-R1U" secondAttribute="top" constant="10" id="bul-tH-UFy"/>
                                                 <constraint firstItem="fsr-4c-YeT" firstAttribute="centerX" secondItem="1ue-ba-R1U" secondAttribute="centerX" id="grX-bp-StG"/>
+                                                <constraint firstAttribute="trailing" secondItem="XcW-B6-OzD" secondAttribute="trailing" constant="23" id="i1G-zw-N75"/>
                                                 <constraint firstItem="rNG-Z9-Y2y" firstAttribute="leading" secondItem="1ue-ba-R1U" secondAttribute="leadingMargin" constant="10" id="kjR-Ts-VGH"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="rNG-Z9-Y2y" secondAttribute="trailing" constant="10" id="m0G-Hw-peV"/>
                                                 <constraint firstItem="rNG-Z9-Y2y" firstAttribute="top" secondItem="fsr-4c-YeT" secondAttribute="bottom" constant="8" id="nPt-Nx-uNr"/>
@@ -640,7 +650,7 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" rowHeight="64" id="neP-B3-J0J" customClass="cellTableViewCell" customModule="Coffee_Luguo" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="228" width="375" height="64"/>
+                                        <rect key="frame" x="0.0" y="255.5" width="375" height="64"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="neP-B3-J0J" id="Pov-gm-Tb5">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="63.5"/>
@@ -729,6 +739,6 @@
         <image name="SortingHat" width="528" height="800"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="cWw-f4-cQt"/>
+        <segue reference="fXa-ls-wrf"/>
     </inferredMetricsTieBreakers>
 </document>

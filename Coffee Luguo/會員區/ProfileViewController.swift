@@ -20,6 +20,10 @@ class ProfileViewController: UIViewController {
         user = RLM_UserUtil.sharedInstance.getUser()
     }
     
+    func initView(){
+        self.view.backgroundColor = UIColor.white
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.setNavigationBarHidden(true, animated: animated)
         super.viewWillAppear(animated)
