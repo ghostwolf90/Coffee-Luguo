@@ -44,7 +44,7 @@ extension MyCoffeeViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "myCoffeeCell", for: indexPath as IndexPath) as! MyCoffeeTableViewCell
-        cell.coffeeIdLabel.text = records[indexPath.row] as? String ?? ""
+        cell.coffeeIdLabel.text = records[indexPath.row].name
         cell.coffeeImageView.image = UIImage(named: coffeeImage[indexPath.row])
         cell.coffeeImageView.layer.cornerRadius = cell.coffeeImageView.frame.size.width/2
         cell.coffeeImageView.clipsToBounds = true
