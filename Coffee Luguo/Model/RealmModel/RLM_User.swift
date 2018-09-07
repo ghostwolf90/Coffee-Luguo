@@ -41,7 +41,7 @@ class RLM_User: Object {
     }
 }
 
-// MARK: RLM_InvoiceC401Util Data操作相關
+// MARK: RLM_UserUtil Data操作相關
 struct RLM_UserUtil{
     static var sharedInstance = RLM_UserUtil()
     let realm = try! Realm()

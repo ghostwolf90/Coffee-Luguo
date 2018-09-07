@@ -49,6 +49,7 @@ class QuestViewController: UIViewController {
     var answer = 0
     var result = [Float]()
     var resultIndex = 0
+    var totalAnswer:Float = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -99,7 +100,6 @@ class QuestViewController: UIViewController {
         let frameHeight = self.view.frame.height / 2
         
         UIView.animate(withDuration: 0.5, delay: 0.0, options: [UIViewAnimationOptions.curveEaseOut], animations: { () -> Void in
-            
 //            self.headLabelLeadConst.constant += frameWidth
 //            self.leftButtonButtomConst.constant = frameHeight
 //            self.rightButtonButtomConst.constant = frameHeight
@@ -114,15 +114,12 @@ class QuestViewController: UIViewController {
                 
         }
         UIView.animate(withDuration: 0.5, delay: 0.5, options: UIViewAnimationOptions.curveEaseIn, animations: { () -> Void in
-            
 //            self.headLabelLeadConst.constant -= frameWidth
 //            self.leftButtonButtomConst.constant += frameHeight
 //            self.rightButtonButtomConst.constant += frameHeight
 //            self.subTextLeadConst.constant += frameWidth
-            
             self.view.layoutIfNeeded()
             }) { (bool) -> Void in
-                
         }
     }
     
@@ -137,16 +134,6 @@ class QuestViewController: UIViewController {
             self.leftButton.isHidden = true
         }else {
             self.leftButton.isHidden = false
-        }
-    }
-    
-    func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue.identifier == "ResultSegue" {
-            if let VC = segue.destination as? ResultViewController {
-                print("perform segue to result")
-                VC.result = self.resultIndex
-                
-            }
         }
     }
 }
@@ -189,8 +176,6 @@ extension QuestViewController{
             self.answers[4] = self.sliderBar.value
             self.result = self.calculateScore()
             //self.resultIndex = self.result.indexOf(self.result.maxElement()!)!
-            
-            print("max element: \(resultIndex)")
             print(answers)
             self.performSegue(withIdentifier: "ResultSegue", sender: self)
             return
@@ -202,9 +187,10 @@ extension QuestViewController{
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        totalAnswer = answers.reduce(0, {$0 + $1})
         if segue.identifier == "ResultSegue" {
             if let destinationVC = segue.destination as? ResultViewController {
-                destinationVC.result = answer
+                destinationVC.result = totalAnswer
             }
         }
     }

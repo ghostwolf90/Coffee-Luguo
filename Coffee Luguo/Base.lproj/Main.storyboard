@@ -357,18 +357,19 @@
                                     <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
+                                    <action selector="backPressed:" destination="Eqb-yp-SS5" eventType="touchUpInside" id="dKv-gA-QKZ"/>
                                     <segue destination="fOx-NJ-vpG" kind="show" id="eKM-y2-xaG"/>
                                 </connections>
                             </button>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="93Q-Yi-OVx">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="none" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="93Q-Yi-OVx">
                                 <rect key="frame" x="16" y="30" width="343" height="495"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="RimageCell" rowHeight="203" id="viV-RH-pe1" userLabel="image" customClass="ResultImageTableViewCell" customModule="Coffee_Luguo" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="343" height="203"/>
+                                        <rect key="frame" x="0.0" y="55.5" width="343" height="203"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="viV-RH-pe1" id="nh6-P8-727">
-                                            <rect key="frame" x="0.0" y="0.0" width="343" height="202.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="343" height="203"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="thQ-f0-sTf">
@@ -396,11 +397,11 @@
                                             <outlet property="resultTitle" destination="aKI-r6-K5P" id="nKJ-bD-9nv"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="150" id="kFB-VL-eha" userLabel="descript">
-                                        <rect key="frame" x="0.0" y="231" width="343" height="150"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="descriptCell" rowHeight="150" id="kFB-VL-eha" userLabel="descript" customClass="DescriptTableViewCell" customModule="Coffee_Luguo" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="258.5" width="343" height="150"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="kFB-VL-eha" id="jsn-fQ-NJh">
-                                            <rect key="frame" x="0.0" y="0.0" width="343" height="149.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="343" height="150"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5ib-mD-Bc8">
@@ -428,6 +429,10 @@
                                                 <constraint firstItem="tLM-qi-55J" firstAttribute="leading" secondItem="jsn-fQ-NJh" secondAttribute="leading" constant="10" id="yk1-EL-6yV"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="descriptDetailLabel" destination="tLM-qi-55J" id="5Mn-Hk-CP1"/>
+                                            <outlet property="descriptTitleLabel" destination="5ib-mD-Bc8" id="MyQ-k7-JzI"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -449,6 +454,7 @@
                     </view>
                     <connections>
                         <outlet property="backHomeBtn" destination="oKl-G9-ceM" id="vZc-ig-Xyd"/>
+                        <outlet property="resultTableView" destination="93Q-Yi-OVx" id="qSl-vP-217"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hVj-Yj-cbY" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -496,10 +502,10 @@
                                 <rect key="frame" x="18" y="421" width="343" height="31"/>
                             </slider>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bGW-Qm-p8X">
-                                <rect key="frame" x="20" y="501" width="160" height="30"/>
+                                <rect key="frame" x="20" y="491" width="160" height="40"/>
                                 <color key="backgroundColor" red="0.25098039215686274" green="0.74901960784313726" blue="0.90196078431372551" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="9Nq-9d-o8x"/>
+                                    <constraint firstAttribute="height" constant="40" id="9Nq-9d-o8x"/>
                                     <constraint firstAttribute="width" constant="160" id="RV8-D1-PsI"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="ihJ-LC-Kq4"/>
                                 </constraints>
@@ -518,10 +524,10 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZeG-Tw-7NL">
-                                <rect key="frame" x="202" y="501" width="160" height="30"/>
+                                <rect key="frame" x="202" y="491" width="160" height="40"/>
                                 <color key="backgroundColor" red="0.25098039215686274" green="0.74901960784313726" blue="0.90196078431372551" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="hix-Cl-OkS"/>
+                                    <constraint firstAttribute="height" constant="40" id="hix-Cl-OkS"/>
                                     <constraint firstAttribute="width" constant="160" id="kNd-MN-9xc"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="PingFangTC-Regular" family="PingFang TC" pointSize="17"/>
@@ -739,6 +745,6 @@
         <image name="SortingHat" width="528" height="800"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="fXa-ls-wrf"/>
+        <segue reference="eKM-y2-xaG"/>
     </inferredMetricsTieBreakers>
 </document>

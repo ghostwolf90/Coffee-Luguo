@@ -18,11 +18,12 @@ class MyCoffeeViewController: UIViewController {
     
     var coffeeImage = ["coffeeG.jpg","coffeeR.jpg","coffeeB.jpg","coffeeY.jpg"]
     var prototypeCell: MyCoffeeTableViewCell!
-    
+    var records = [RLM_Record]()
     @IBOutlet weak var myCoffeeTableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        records = RLM_RecordUtil.sharedInstance.getRecords()
     }
     
     override func didReceiveMemoryWarning() {
@@ -34,7 +35,7 @@ class MyCoffeeViewController: UIViewController {
 extension MyCoffeeViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return coffeeId.count
+        return records.count
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -43,11 +44,8 @@ extension MyCoffeeViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "myCoffeeCell", for: indexPath as IndexPath) as! MyCoffeeTableViewCell
-        
-        cell.coffeeIdLabel.text = coffeeId[indexPath.row]
-        cell.introductionLabel.text = coffeeIn[indexPath.row]
+        cell.coffeeIdLabel.text = records[indexPath.row] as? String ?? ""
         cell.coffeeImageView.image = UIImage(named: coffeeImage[indexPath.row])
-        
         cell.coffeeImageView.layer.cornerRadius = cell.coffeeImageView.frame.size.width/2
         cell.coffeeImageView.clipsToBounds = true
         

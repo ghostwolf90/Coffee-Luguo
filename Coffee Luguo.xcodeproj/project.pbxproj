@@ -13,6 +13,8 @@
 		3F559793213F6B1300FB6B16 /* RealmMigration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F559792213F6B1200FB6B16 /* RealmMigration.swift */; };
 		3F559796213F6ED000FB6B16 /* DoubleExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F559795213F6ED000FB6B16 /* DoubleExtension.swift */; };
 		3F55979A213F7E8D00FB6B16 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F559799213F7E8D00FB6B16 /* Helper.swift */; };
+		3F56B53B21423E9900A918A8 /* DescriptTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F56B53A21423E9900A918A8 /* DescriptTableViewCell.swift */; };
+		3F56B53D214252DF00A918A8 /* RLM_Record.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F56B53C214252DF00A918A8 /* RLM_Record.swift */; };
 		3FC54710213E89ED0075C76C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC5470F213E89ED0075C76C /* LoginViewController.swift */; };
 		3FD3378B213DF14E002D18FF /* imageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD33783213DF14D002D18FF /* imageTableViewCell.swift */; };
 		3FD3378D213DF14E002D18FF /* MyCoffeeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD33785213DF14D002D18FF /* MyCoffeeTableViewCell.swift */; };
@@ -77,6 +79,8 @@
 		3F559792213F6B1200FB6B16 /* RealmMigration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmMigration.swift; sourceTree = "<group>"; };
 		3F559795213F6ED000FB6B16 /* DoubleExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoubleExtension.swift; sourceTree = "<group>"; };
 		3F559799213F7E8D00FB6B16 /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
+		3F56B53A21423E9900A918A8 /* DescriptTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptTableViewCell.swift; sourceTree = "<group>"; };
+		3F56B53C214252DF00A918A8 /* RLM_Record.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RLM_Record.swift; sourceTree = "<group>"; };
 		3FC5470F213E89ED0075C76C /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		3FD33783213DF14D002D18FF /* imageTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = imageTableViewCell.swift; sourceTree = "<group>"; };
 		3FD33785213DF14D002D18FF /* MyCoffeeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyCoffeeTableViewCell.swift; sourceTree = "<group>"; };
@@ -184,6 +188,7 @@
 			isa = PBXGroup;
 			children = (
 				3F1A0DAF2140B2300093D15F /* ResultImageTableViewCell.swift */,
+				3F56B53A21423E9900A918A8 /* DescriptTableViewCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -212,6 +217,7 @@
 			children = (
 				3F559792213F6B1200FB6B16 /* RealmMigration.swift */,
 				3F559790213E96F900FB6B16 /* RLM_User.swift */,
+				3F56B53C214252DF00A918A8 /* RLM_Record.swift */,
 			);
 			path = RealmModel;
 			sourceTree = "<group>";
@@ -591,7 +597,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F56B53D214252DF00A918A8 /* RLM_Record.swift in Sources */,
 				AC5DC1D71BAD518A00D01AF6 /* QuestViewController.swift in Sources */,
+				3F56B53B21423E9900A918A8 /* DescriptTableViewCell.swift in Sources */,
 				AC5DC21B1BAD6C1100D01AF6 /* YTPlayerView.m in Sources */,
 				3F559791213E96F900FB6B16 /* RLM_User.swift in Sources */,
 				3FC54710213E89ED0075C76C /* LoginViewController.swift in Sources */,

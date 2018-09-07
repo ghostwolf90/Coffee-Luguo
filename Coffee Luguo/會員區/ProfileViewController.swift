@@ -91,11 +91,13 @@ extension ProfileViewController: UITableViewDelegate, UITableViewDataSource {
         case 0 :
             let imageCell = tableView.dequeueReusableCell(withIdentifier: "imageCell", for: indexPath as IndexPath) as! imageTableViewCell
             do {
-                let imageData = try Data(contentsOf: URL(string: user.picture)!)
-                imageCell.profileNameLabel.text = user.name
-                imageCell.profileImage.image = UIImage(data: imageData)
-                imageCell.profileImage.clipsToBounds = true
-                imageCell.profileImage.layer.cornerRadius = 40
+                if user.picture.count > 0{
+                    let imageData = try Data(contentsOf: URL(string: user.picture)!)
+                    imageCell.profileNameLabel.text = user.name
+                    imageCell.profileImage.image = UIImage(data: imageData)
+                    imageCell.profileImage.clipsToBounds = true
+                    imageCell.profileImage.layer.cornerRadius = 40
+                }
             } catch {
                 print("Unable to load data: \(error)")
             }                                    
