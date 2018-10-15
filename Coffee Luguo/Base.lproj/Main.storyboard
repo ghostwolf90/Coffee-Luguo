@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="7qz-gq-qZa">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="7qz-gq-qZa">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -270,6 +269,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g3M-hn-epS">
                                 <rect key="frame" x="20" y="538" width="335" height="54"/>
                                 <color key="backgroundColor" red="0.25098039215686274" green="0.74901960784313726" blue="0.90196078431372551" alpha="1" colorSpace="calibratedRGB"/>
+                                <accessibility key="accessibilityConfiguration" identifier="startButton"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="54" id="O6e-V9-WYu"/>
                                 </constraints>
@@ -742,9 +742,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="SortingHat" width="528" height="800"/>
+        <image name="SortingHat" width="126.72000122070312" height="192"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="eKM-y2-xaG"/>
+        <segue reference="cWw-f4-cQt"/>
     </inferredMetricsTieBreakers>
 </document>
